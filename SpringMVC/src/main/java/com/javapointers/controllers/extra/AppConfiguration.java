@@ -1,30 +1,20 @@
 package com.javapointers.controllers.extra;
 
-import com.javapointers.controllers.beans.BeanX;
-import com.javapointers.controllers.beans.BeanY;
-import com.javapointers.controllers.beans.iBean;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.Resource;
-import java.util.Set;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.*;
 
 @Configuration
 //@ComponentScan
 //@ComponentScan(basePackages = "com.javapointers.controllers")
+@ImportResource("WEB-INF/dispatcher-servlet.xml")
+@PropertySource("prop/app.properties")
+//@EnableAspectJAutoProxy
 public class AppConfiguration {
 
-//    @Bean
-//    public BeanX getBeanX() {
-//        return new BeanX();
-//    }
-//
-//    @Bean
-//    public BeanY getBeanY() {
-//        return new BeanY();
-//    }
+    @Value("${jdbc.url}")
+    private String url;
+
+
 
 
 }
