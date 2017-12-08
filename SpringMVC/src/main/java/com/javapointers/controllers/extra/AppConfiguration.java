@@ -8,12 +8,10 @@ import org.springframework.context.annotation.*;
 //@ComponentScan(basePackages = "com.javapointers.controllers")
 @ImportResource("WEB-INF/dispatcher-servlet.xml")
 @PropertySource("prop/app.properties")
-//@EnableAspectJAutoProxy
 public class AppConfiguration {
 
     @Value("${jdbc.url}")
     private String url;
-
 
 
 

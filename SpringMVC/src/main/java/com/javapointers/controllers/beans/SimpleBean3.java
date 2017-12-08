@@ -1,11 +1,20 @@
 package com.javapointers.controllers.beans;
 
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 public class SimpleBean3 {
+
+    @NonNull
     public SimpleBean1 simpleBean1;
+
+    @NonNull
     public SimpleBean2 simpleBean2;
+
+    @Nullable
     public String jdbcUrl;
 
     public SimpleBean3(SimpleBean1 simpleBean1){

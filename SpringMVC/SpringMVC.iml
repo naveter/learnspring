@@ -50,5 +50,8 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="aspectj:aspectjweaver:1.5.3" level="project" />
+    <orderEntry type="library" name="aspectj:aspectjlib:1.5.3" level="project" />
+    <orderEntry type="library" name="aspectj:aspectjrt:1.5.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="aspectj:aspectjtools:1.5.3" level="project" />
   </component>
 </module>

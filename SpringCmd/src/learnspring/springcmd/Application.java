@@ -1,16 +1,31 @@
 package learnspring.springcmd;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.postgresql.Driver;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.stream.Collectors;
+import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan
+@EnableAspectJAutoProxy
+@PropertySource("classpath:learnspring/springcmd/app.properties")
+@ImportResource("classpath:learnspring/springcmd/config.xml")
 public class Application {
+
+    @Value("${jdbc.driverClassName}")
+    private String driverClassName;
+
+    @Value("${jdbc.url}")
+    private String url;
+
+    @Value("${jdbc.username}")
+    private String username;
+
+    @Value("${jdbc.password}")
+    private String password;
 
     @Bean
     MessageService mockMessageService() {
@@ -21,29 +36,31 @@ public class Application {
         };
     }
 
+//    @Bean
+//    DataSource getConnection() {
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName(this.driverClassName);
+//        dataSource.setUrl(this.url);
+//        dataSource.setUsername(this.username);
+//        dataSource.setPassword(this.password);
+//        return dataSource;
+//    }
+
+    @Bean
+    public AppAspect doAppAspect(){
+        return new AppAspect();
+    }
+
     public static void main(String[] args) {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(Application.class);
         MessagePrinter printer = context.getBean(MessagePrinter.class);
         printer.printMessage();
 
+        TestDatabase testDateBase = context.getBean(TestDatabase.class);
+        testDateBase.printAllUsers();
+        testDateBase.printUser(1);
 
-        String title = "not found";
-        org.springframework.core.io.Resource template = context.getResource("https://mail.ru");
 
-        try {
-            title = new BufferedReader(new InputStreamReader(template.getInputStream()))
-                    .lines()
-                    .filter(e -> e.matches(".*<title>.+</title>.*"))
-                    .map(e -> e.replaceAll(".+<title>|</title>.+", ""))
-                    .collect(Collectors.joining("<br>"));
-
-//            title = title.substring(0, 10);
-
-            System.out.println(title);
-        }
-        catch(IOException e) {
-            System.out.println(e.getMessage());
-        }
     }
 }
