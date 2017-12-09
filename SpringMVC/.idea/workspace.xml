@@ -7,30 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4979618-812f-4745-bbda-808120c9a843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/AppAspect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/TestDatabase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/app.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/dbitrems/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/dbitrems/UserDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/dbitrems/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/target/classes/learnspring/springcmd/Application$1.class" afterPath="$PROJECT_DIR$/../SpringCmd/target/classes/learnspring/springcmd/Application$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/target/classes/learnspring/springcmd/Application.class" afterPath="$PROJECT_DIR$/../SpringCmd/target/classes/learnspring/springcmd/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVC.war" afterPath="$PROJECT_DIR$/target/SpringMVC.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/com/javapointers/controllers/beans/SimpleBean3.class" afterPath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/com/javapointers/controllers/beans/SimpleBean3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/com/javapointers/controllers/extra/AppConfiguration.class" afterPath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/classes/com/javapointers/controllers/extra/AppConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/javapointers/controllers/beans/SimpleBean3.class" afterPath="$PROJECT_DIR$/target/classes/com/javapointers/controllers/beans/SimpleBean3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/javapointers/controllers/extra/AppConfiguration.class" afterPath="$PROJECT_DIR$/target/classes/com/javapointers/controllers/extra/AppConfiguration.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gs-serving-web-content" afterPath="$PROJECT_DIR$/../gs-serving-web-content" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringCmd/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/SpringCmd.iml" afterPath="$PROJECT_DIR$/../SpringCmd/SpringCmd.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/pom.xml" afterPath="$PROJECT_DIR$/../SpringCmd/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/Application.java" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/TestDatabase.java" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/TestDatabase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/config.xml" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/dbitrems/User.java" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/dbitrems/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringMVC.iml" afterPath="$PROJECT_DIR$/SpringMVC.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/javapointers/controllers/beans/SimpleBean3.java" afterPath="$PROJECT_DIR$/src/main/java/com/javapointers/controllers/beans/SimpleBean3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/javapointers/controllers/extra/AppConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/javapointers/controllers/extra/AppConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/prop/app.properties" afterPath="$PROJECT_DIR$/src/main/webapp/prop/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/SpringMVC/WEB-INF/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVC/prop/app.properties" afterPath="$PROJECT_DIR$/target/SpringMVC/prop/app.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,21 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConfiguration.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/extra/AppConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="308">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,8 +57,8 @@
       <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="388">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,7 +173,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="178" />
     <option name="width" value="1684" />
     <option name="height" value="1077" />
@@ -501,7 +490,7 @@
       <workItem from="1512382955712" duration="2831000" />
       <workItem from="1512414734184" duration="10875000" />
       <workItem from="1512476042786" duration="14470000" />
-      <workItem from="1512647672241" duration="4745000" />
+      <workItem from="1512647672241" duration="6235000" />
     </task>
     <task id="LOCAL-00001" summary="Before add aspectJ">
       <created>1512641638125</created>
@@ -510,14 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512641638125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Before add hibernate">
+      <created>1512745582235</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512745582235</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33166000" />
+    <option name="totallyTimeSpent" value="34656000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="0" width="1684" height="1077" extended-state="0" />
+    <frame x="178" y="0" width="1684" height="1077" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -587,7 +583,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before add aspectJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before add aspectJ" />
+    <MESSAGE value="Before add hibernate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before add hibernate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,32 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/beans/SimpleBean3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/prop/app.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -896,11 +867,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/extra/AppConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/beans/SimpleBean3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

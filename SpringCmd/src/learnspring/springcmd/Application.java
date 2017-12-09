@@ -1,5 +1,7 @@
 package learnspring.springcmd;
 
+import learnspring.springcmd.dbitrems.User;
+import learnspring.springcmd.dbitrems.UserDAO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -60,6 +62,8 @@ public class Application {
         TestDatabase testDateBase = context.getBean(TestDatabase.class);
         testDateBase.printAllUsers();
         testDateBase.printUser(1);
+        testDateBase.testHibernate();
+
 
 
     }

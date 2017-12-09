@@ -1,7 +1,9 @@
 package learnspring.springcmd;
 
 import learnspring.springcmd.dbitrems.User;
+import learnspring.springcmd.dbitrems.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.SqlParameter;
@@ -21,6 +23,9 @@ public class TestDatabase {
 
     @Autowired
     private DataSource dataSource;
+
+    @Autowired
+    private ApplicationContext ctx;
 
     private List<User> getAllUsers(){
         JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
@@ -76,6 +81,13 @@ public class TestDatabase {
             return user;
         }
 
+    }
+
+    public void testHibernate(){
+        UserDAO personDAO = this.ctx.getBean(UserDAO.class);
+        User user = personDAO.getById(1);
+
+        System.out.println("Person is found: " + user.toString());
     }
 
 }
