@@ -11,6 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.object.MappingSqlQuery;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.*;
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,6 +27,14 @@ public class TestDatabase {
 
     @Autowired
     private ApplicationContext ctx;
+
+//
+//    @PersistenceContext(unitName="entityManager")
+    @PersistenceUnit
+    EntityManagerFactory emf;
+
+    @Autowired
+    EntityManager em;
 
     private List<User> getAllUsers(){
         JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
@@ -88,6 +97,13 @@ public class TestDatabase {
         User user = personDAO.getById(1);
 
         System.out.println("Person is found: " + user.toString());
+    }
+
+    public void testEntityManager(){
+        Query query = em.createQuery("from User");
+        List<User> users = query.getResultList();
+        users.stream().forEach(u -> System.out.println(u.toString()));
+
     }
 
 }
