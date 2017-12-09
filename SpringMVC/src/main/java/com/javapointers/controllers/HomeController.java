@@ -2,6 +2,7 @@ package com.javapointers.controllers;
 
 import com.javapointers.controllers.beans.SimpleBean3;
 import com.javapointers.controllers.beans.iBean;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -27,6 +28,8 @@ import java.util.stream.Collectors;
 @Controller
 public class HomeController {
 
+    private static final Logger LOGGER = Logger.getLogger(HomeController.class);
+
     @Autowired
     private SimpleBean3 simpleBean3;
 
@@ -51,6 +54,13 @@ public class HomeController {
     public String greeting(
             @RequestParam(value="name", required=false, defaultValue="World") String name,
             Model model) {
+
+        LOGGER.info("printHello started.");
+
+        //logs debug message
+        if(LOGGER.isDebugEnabled()){
+            LOGGER.debug("Inside:  printHello");
+        }
 
         Environment env = this.ctx.getEnvironment();
         model.addAttribute("env", env.toString());
