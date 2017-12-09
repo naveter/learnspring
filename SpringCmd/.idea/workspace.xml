@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e82dec-afc9-4306-bda2-77bb5d50afd1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/learnspring/springcmd/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/learnspring/springcmd/Application$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/learnspring/springcmd/Application.class" afterPath="$PROJECT_DIR$/target/classes/learnspring/springcmd/Application.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/javapointers/controllers/extra/GlobalControllerAdvice.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/webapp/WEB-INF/jsp/error.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/target/SpringMVC.war" afterPath="$PROJECT_DIR$/../SpringMVC/target/SpringMVC.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/target/SpringMVC/WEB-INF/classes/com/javapointers/controllers/HomeController.class" afterPath="$PROJECT_DIR$/../SpringMVC/target/SpringMVC/WEB-INF/classes/com/javapointers/controllers/HomeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/target/classes/com/javapointers/controllers/HomeController.class" afterPath="$PROJECT_DIR$/../SpringMVC/target/classes/com/javapointers/controllers/HomeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gs-serving-web-content" afterPath="$PROJECT_DIR$/../gs-serving-web-content" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringCmd.iml" afterPath="$PROJECT_DIR$/SpringCmd.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/.idea/artifacts/SpringMVC_war_exploded.xml" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/artifacts/SpringMVC_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/SpringMVC.iml" afterPath="$PROJECT_DIR$/../SpringMVC/SpringMVC.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/pom.xml" afterPath="$PROJECT_DIR$/../SpringMVC/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/javapointers/controllers/HomeController.java" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/javapointers/controllers/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/target/SpringMVC/index.jsp" afterPath="$PROJECT_DIR$/../SpringMVC/target/SpringMVC/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="503">
@@ -79,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="26" column="93" lean-forward="false" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
+            <state relative-caret-position="393">
+              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="e#732#757#0" expanded="true" />
                 <element signature="e#796#809#0" expanded="true" />
@@ -111,8 +107,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="613">
+              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -460,7 +456,7 @@
       <updated>1512392391507</updated>
       <workItem from="1512392395025" duration="7939000" />
       <workItem from="1512572709083" duration="2437000" />
-      <workItem from="1512647374080" duration="22043000" />
+      <workItem from="1512647374080" duration="22768000" />
     </task>
     <task id="LOCAL-00001" summary="After set up Hibernate">
       <created>1512823762876</created>
@@ -491,7 +487,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32419000" />
+    <option name="totallyTimeSpent" value="33144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="18" width="1837" height="1060" extended-state="1" />
@@ -580,7 +576,7 @@
         <state relative-caret-position="418">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -618,7 +614,7 @@
         <state relative-caret-position="418">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -737,30 +733,7 @@
         <state relative-caret-position="528">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="26" column="93" lean-forward="false" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
-          <folding>
-            <element signature="e#732#757#0" expanded="true" />
-            <element signature="e#796#809#0" expanded="true" />
-            <element signature="e#853#871#0" expanded="true" />
-            <element signature="e#915#933#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -782,6 +755,29 @@
         <state relative-caret-position="503">
           <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#732#757#0" expanded="true" />
+            <element signature="e#796#809#0" expanded="true" />
+            <element signature="e#853#871#0" expanded="true" />
+            <element signature="e#915#933#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

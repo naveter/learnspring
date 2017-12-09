@@ -14,7 +14,8 @@
   <h3>Navigation:</h3>
 
   <a href="home">home</a><br>
-  <a href="greeting">greeting</a>
+  <a href="greeting">greeting</a><br>
+  <a href="exception">exception</a><br>
 
   </body>
 </html>

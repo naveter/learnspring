@@ -8,11 +8,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.env.Environment;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.io.BufferedReader;
@@ -86,4 +89,22 @@ public class HomeController {
 
         return "greeting";
     }
+
+    @RequestMapping("/exception")
+    public String exception(){
+
+        throw new RuntimeException("Test exception from HomeController.exception()");
+
+    }
+
+//    @ExceptionHandler(Exception.class)
+//    public ModelAndView handleIOException(Exception ex) {
+//
+//        ModelAndView mav = new ModelAndView();
+//        mav.addObject("exception", ex);
+//        mav.setViewName("error");
+//
+//        return mav;
+//    }
+
 }
