@@ -21,7 +21,7 @@
         <property name="dataSource">
             <ref bean="dataSource"/>
         </property>
-        <property name="packagesToScan" value="learnspring.springcmd.dbitrems" />
+        <property name="packagesToScan" value="learnspring.springcmd.dbitems" />
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</prop>

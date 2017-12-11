@@ -1,26 +1,23 @@
 package learnspring.springcmd;
 
-import learnspring.springcmd.dbitrems.User;
-import learnspring.springcmd.dbitrems.UserDAO;
-import org.springframework.beans.factory.annotation.Qualifier;
+import learnspring.springcmd.dbitems.User;
+import learnspring.springcmd.dbitems.UserDAO;
+import learnspring.springcmd.dbitems.UserDAOImpl;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
-import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.postgresql.Driver;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.JpaVendorAdapter;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.vendor.Database;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.Properties;
+import java.util.Date;
+import java.util.List;
 
 @Configuration
 @ComponentScan
@@ -42,6 +39,13 @@ public class Application {
     @Value("${jdbc.password}")
     private String password;
 
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
     @Bean
     MessageService mockMessageService() {
         return new MessageService() {
@@ -50,6 +54,23 @@ public class Application {
             }
         };
     }
+
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        final HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+        transactionManager.setSessionFactory(getSessionFactory());
+        return transactionManager;
+    }
+
+    @Bean
+    public JdbcTemplate getJdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+
+//    @Bean
+//    public UserDAOImpl getUserDAOImpl() {
+//        return new UserDAOImpl();
+//    }
 
     @Bean
     public EntityManager getEntityManager(EntityManagerFactory emf) {
@@ -72,6 +93,8 @@ public class Application {
         testDateBase.printUser(1);
         testDateBase.testHibernate();
         testDateBase.testEntityManager();
+
+
 
 
     }

@@ -3,7 +3,7 @@
              version="1.0">
 
     <!--<persistence-unit name="user" transaction-type="RESOURCE_LOCAL" >-->
-        <!--<class>learnspring.springcmd.dbitrems.User</class>-->
+        <!--<class>learnspring.springcmd.dbitems.User</class>-->
     <!--</persistence-unit>-->
 
 </persistence>
