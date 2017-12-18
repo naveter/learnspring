@@ -104,13 +104,13 @@ public class TestDatabase {
 
         User u = new User();
 //        u.setId((long)3);
-        u.setFirstname("Terry2");
-        u.setLastname("Gabba2");
-        u.setCreated(new Date());
-        u.setLogin("terry2");
-        u.setPassword("123456");
-        u.setLastlogin(new Date());
-        userDAO.save(u);
+//        u.setFirstname("Terry2");
+//        u.setLastname("Gabba2");
+//        u.setCreated(new Date());
+//        u.setLogin("terry2");
+//        u.setPassword("123456");
+//        u.setLastlogin(new Date());
+//        userDAO.save(u);
 //        em.persist(u);
 
 
