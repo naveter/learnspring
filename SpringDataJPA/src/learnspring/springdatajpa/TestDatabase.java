@@ -34,8 +34,11 @@ public class TestDatabase {
     @Autowired
     UserDAOImpl userDAO;
 
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
-//    @Transactional
+
+    @Transactional
     public void testHibernate(){
 //        UserDAO personDAO = this.ctx.getBean(UserDAO.class);
 //        User user = userDAO.getById(1);
@@ -43,17 +46,37 @@ public class TestDatabase {
         System.out.println("Person is found: ");
 
         User u = new User();
-        u.setId((long)6);
-        u.setFirstname("Terry6");
-        u.setLastname("Gabba3");
+//        u.setId((long)7);
+        u.setFirstname("Terry7");
+        u.setLastname("Gabba7");
         u.setCreated(new Date());
-        u.setLogin("terry3");
+        u.setLogin("terry7");
         u.setPassword("123456");
         u.setLastlogin(new Date());
         userDAO.save(u);
-//        em.persist(u);
 
 
+    }
+
+    public void printAllUsers(){
+        List<User> users = this.jdbcTemplate.query(
+                "select * from public.user",
+                new RowMapper<User>() {
+                    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+                        User user = new User();
+                        user.setId(rs.getLong("id"));
+                        user.setFirstname(rs.getString("firstname"));
+                        user.setLastname(rs.getString("lastname"));
+                        user.setCreated(rs.getDate("created"));
+                        user.setLogin(rs.getString("login"));
+                        user.setPassword(rs.getString("password"));
+                        user.setLastlogin(rs.getDate("lastlogin"));
+
+                        return user;
+                    }
+                });
+
+        users.stream().forEach(u -> System.out.println(u.toString()));
     }
 
 

@@ -17,7 +17,6 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan
-//@EnableAspectJAutoProxy
 @PropertySource("classpath:learnspring/springdatajpa/app.properties")
 @ImportResource("classpath:learnspring/springdatajpa/config.xml")
 @EnableTransactionManagement
@@ -30,24 +29,16 @@ public class Application {
     @Autowired
     private SessionFactory sessionFactory;
 
-//    @Bean
-//    public PlatformTransactionManager transactionManager() {
-//        final HibernateTransactionManager transactionManager = new HibernateTransactionManager();
-//        transactionManager.setSessionFactory(getSessionFactory());
-//        return transactionManager;
-//    }
-
     @Bean
     public PlatformTransactionManager transactionManager() {
         final PlatformTransactionManager transactionManager = new JpaTransactionManager();
-//        transactionManager.setSessionFactory(getSessionFactory());
         return transactionManager;
     }
 
-//    @Bean
-//    public JdbcTemplate getJdbcTemplate(DataSource dataSource) {
-//        return new JdbcTemplate(dataSource);
-//    }
+    @Bean
+    public JdbcTemplate getJdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
 
     @Bean
     public EntityManager getEntityManager(EntityManagerFactory emf) {
@@ -62,7 +53,7 @@ public class Application {
 
         TestDatabase testDateBase = context.getBean(TestDatabase.class);
         testDateBase.testHibernate();
-
+        testDateBase.printAllUsers();
 
 
 

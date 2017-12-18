@@ -7,18 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4979618-812f-4745-bbda-808120c9a843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/SpringDataJPA.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/Application.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/TestDatabase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/app.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/UserDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/DBAbstract.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/UserTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/create.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/insert.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/test.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/dbitrems/User.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gs-serving-web-content" afterPath="$PROJECT_DIR$/../gs-serving-web-content" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringCmd/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/TestDatabase.java" afterPath="$PROJECT_DIR$/../SpringCmd/src/learnspring/springcmd/TestDatabase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/SpringDataJPA.iml" afterPath="$PROJECT_DIR$/../SpringDataJPA/SpringDataJPA.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/pom.xml" afterPath="$PROJECT_DIR$/../SpringDataJPA/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/Application.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/TestDatabase.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/TestDatabase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/User.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/UserDAOImpl.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
