@@ -5,12 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name="public.user")
-public class User {
-
-    @Id
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class User extends DBEntity {
 
     private String firstname;
     private String lastname;
@@ -18,14 +13,6 @@ public class User {
     private String login;
     private String password;
     private Date lastlogin;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getFirstname() {
         return firstname;
@@ -61,12 +48,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
+        return super.toString() +
+                "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", login='" + login + '\'' +
-                '}';
+                ", login='" + login + '\'';
     }
 
     public String getPassword() {
@@ -84,24 +69,5 @@ public class User {
     public void setLastlogin(Date lastlogin) {
         this.lastlogin = lastlogin;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        return id == user.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return (int) (long) id;
-    }
-
-
-
-
 
 }
