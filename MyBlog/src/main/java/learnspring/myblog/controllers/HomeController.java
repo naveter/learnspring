@@ -1,5 +1,7 @@
 package learnspring.myblog.controllers;
 
+import learnspring.myblog.dao.UserDAO;
+import learnspring.myblog.dbitems.User;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class HomeController {
 
@@ -17,6 +21,9 @@ public class HomeController {
 
     @Autowired
     private ApplicationContext ctx;
+
+    @Autowired
+    UserDAO userDAO;
 
     @RequestMapping(value="/home", method = RequestMethod.GET)
     public String viewHome(){
@@ -41,6 +48,17 @@ public class HomeController {
 
         throw new RuntimeException("Test exception from HomeController.exception()");
 
+    }
+
+    @RequestMapping("/dao")
+    public String dao(Model model){
+        List<User> all = userDAO.getAll(0, Integer.MAX_VALUE);
+        StringBuilder out = new StringBuilder();
+        all.stream().forEach(u -> out.append(u.toString() + "<br>" ));
+
+        model.addAttribute("users", out.toString() );
+
+        return "dao";
     }
 
 

@@ -48,8 +48,8 @@
             <version>1.4</version>
         </dependency>
         <dependency>
-            <groupId>org.postgresql.Driver</groupId>
-            <artifactId>org.postgresql.Driver</artifactId>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
             <version>${postgresql.version}</version>
         </dependency>
         <dependency>
