@@ -12,37 +12,16 @@
 
     <mvc:annotation-driven />
     <context:annotation-config/>
-    <context:component-scan base-package="com.javapointers.controllers" />
+    <context:component-scan base-package="learnspring.myblog" />
 
     <context:property-placeholder location="prop/app.properties"/>
 
-    <bean class="com.javapointers.controllers.extra.InstantiationTracingBeanPostProcessor"/>
+    <bean class="learnspring.myblog.extra.InstantiationTracingBeanPostProcessor"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <!--<beans default-init-method="init">-->
-
-        <!--<bean id="SimpleBean1" class="com.javapointers.controllers.beans.SimpleBean1">-->
-            <!--<property name="prop" value=" from dispatcher-servlet"/>-->
-        <!--</bean>-->
-
-        <!--<bean-->
-                <!--id="SimpleBean2"-->
-                <!--class="com.javapointers.controllers.beans.SimpleBean2"-->
-                <!--factory-method="getInstance">-->
-        <!--</bean>-->
-
-        <!--<bean id="simpleBean3" class="com.javapointers.controllers.beans.SimpleBean3">-->
-            <!--<constructor-arg ref="SimpleBean1"/>-->
-            <!--<property name="simpleBean2">-->
-                <!--<ref bean="SimpleBean2"></ref>-->
-            <!--</property>-->
-            <!--<property name="jdbcUrl" value="${jdbc.url}"></property>-->
-        <!--</bean>-->
-
-    <!--</beans>-->
 
 </beans>
