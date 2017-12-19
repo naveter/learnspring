@@ -17,7 +17,7 @@ public class Post extends DBEntity {
     @JoinColumn(name="user_id", insertable = false, updatable = false)
     private User user;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="category_id", insertable = false, updatable = false)
     private Category category;
 

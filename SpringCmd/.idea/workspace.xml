@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e82dec-afc9-4306-bda2-77bb5d50afd1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/Category.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/Post.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/Source.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gs-serving-web-content" afterPath="$PROJECT_DIR$/../gs-serving-web-content" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/User.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/TestDatabase.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/TestDatabase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/Post.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/Post.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/UserTest.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/UserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dbitems/UserDAOImpl.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dao/UserDAO.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />

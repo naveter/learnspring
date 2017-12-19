@@ -1,24 +1,18 @@
 package learnspring.springdatajpa;
 
 import learnspring.springdatajpa.dbitems.User;
-import learnspring.springdatajpa.dbitems.UserDAOImpl;
+import learnspring.springdatajpa.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.SqlParameter;
-import org.springframework.jdbc.object.MappingSqlQuery;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
-import javax.persistence.Query;
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
 import java.util.Date;
 import java.util.List;
 
@@ -32,7 +26,7 @@ public class TestDatabase {
     EntityManager em;
 
     @Autowired
-    UserDAOImpl userDAO;
+    UserDAO userDAO;
 
     @Autowired
     JdbcTemplate jdbcTemplate;
