@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 
-public class UserTest extends DBAbstract {
+public class UserDAOTest extends DBAbstract {
 
     @Autowired
     private UserDAO userDAO;

@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e82dec-afc9-4306-bda2-77bb5d50afd1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dao/CategoryDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/CategoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dao/PostDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/dao/SourceDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/PostDAOTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/SourceDAOTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gs-serving-web-content" afterPath="$PROJECT_DIR$/../gs-serving-web-content" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/Application.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/src/learnspring/springdatajpa/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/DBAbstract.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/DBAbstract.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/create.sql" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/settings/create.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/insert.sql" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/settings/insert.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/test.properties" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/settings/test.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/CategoryTest.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/CategoryDAOTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/UserTest.java" afterPath="$PROJECT_DIR$/../SpringDataJPA/test/learnspring/springdatajpa/UserDAOTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
