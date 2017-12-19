@@ -17,8 +17,8 @@ import java.math.BigInteger;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes=Application.class)
-@TestPropertySource("test.properties")
-@Sql({"create.sql", "insert.sql"})
+@TestPropertySource("settings/test.properties")
+@Sql({"settings/create.sql", "settings/insert.sql"})
 @Transactional
 public abstract class DBAbstract {
 

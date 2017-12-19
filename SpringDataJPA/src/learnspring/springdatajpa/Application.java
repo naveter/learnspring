@@ -52,7 +52,7 @@ public class Application {
         System.out.println("Application is run!");
 
         TestDatabase testDateBase = context.getBean(TestDatabase.class);
-        testDateBase.testHibernate();
+//        testDateBase.testHibernate();
         testDateBase.printAllUsers();
 
 
