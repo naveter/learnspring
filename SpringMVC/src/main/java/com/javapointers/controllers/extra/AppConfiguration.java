@@ -11,11 +11,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //@ComponentScan(basePackages = "com.javapointers.controllers")
 @ImportResource("WEB-INF/dispatcher-servlet.xml")
 @PropertySource("prop/app.properties")
-public class AppConfiguration {
+public class AppConfiguration  {
 
     @Value("${jdbc.url}")
     private String url;
 
-
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/resources/**")
+//                .addResourceLocations("/public-resources/")
+//                .setCacheControl(CacheControl.maxAge(1, TimeUnit.HOURS).cachePublic());
+//    }
 
 }
