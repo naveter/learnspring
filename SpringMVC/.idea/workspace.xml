@@ -7,25 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4979618-812f-4745-bbda-808120c9a843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/BeanX.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/iBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/controllers/HomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/extra/AppConfiguration.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/learnspring/myblog/BeanX.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/learnspring/myblog/iBean.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/learnspring/myblog/sys/AppConfiguration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/HomeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/BeanX.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/iBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/extra/AppConfiguration.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gs-serving-web-content" afterPath="$PROJECT_DIR$/../gs-serving-web-content" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyBlog/MyBlog.iml" afterPath="$PROJECT_DIR$/../MyBlog/MyBlog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyBlog/pom.xml" afterPath="$PROJECT_DIR$/../MyBlog/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/BeanXY.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/BeanXY.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/BeanY.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/BeanY.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/SimpleBean1.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/SimpleBean1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/SimpleBean2.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/SimpleBean2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/beans/SimpleBean3.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/beans/SimpleBean3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/extra/GlobalControllerAdvice.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/extra/GlobalControllerAdvice.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/com/javapointers/controllers/extra/InstantiationTracingBeanPostProcessor.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/extra/InstantiationTracingBeanPostProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/beans/SimpleBean2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -506,7 +492,7 @@
       <workItem from="1512476042786" duration="14470000" />
       <workItem from="1512647672241" duration="20380000" />
       <workItem from="1513698637546" duration="771000" />
-      <workItem from="1513701351112" duration="125000" />
+      <workItem from="1513701351112" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="Before add aspectJ">
       <created>1512641638125</created>
@@ -540,7 +526,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49697000" />
+    <option name="totallyTimeSpent" value="49947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="11" width="1684" height="1077" extended-state="1" />
@@ -967,7 +953,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/beans/SimpleBean2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
