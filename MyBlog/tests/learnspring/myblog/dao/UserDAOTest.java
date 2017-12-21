@@ -1,7 +1,6 @@
-package learnspring.myblog;
+package learnspring.myblog.dao;
 
 import learnspring.myblog.dbitems.User;
-import learnspring.myblog.dao.UserDAO;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

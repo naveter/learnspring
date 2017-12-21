@@ -1,6 +1,5 @@
-package learnspring.myblog;
+package learnspring.myblog.dao;
 
-import learnspring.myblog.dao.PostDAO;
 import learnspring.myblog.dbitems.Category;
 import learnspring.myblog.dbitems.Post;
 import learnspring.myblog.dbitems.User;

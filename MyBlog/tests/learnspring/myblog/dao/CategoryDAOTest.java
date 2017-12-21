@@ -1,6 +1,5 @@
-package learnspring.myblog;
+package learnspring.myblog.dao;
 
-import learnspring.myblog.dao.CategoryDAO;
 import learnspring.myblog.dbitems.Category;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

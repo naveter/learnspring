@@ -1,4 +1,4 @@
-package learnspring.myblog;
+package learnspring.myblog.dao;
 
 import learnspring.myblog.extra.AppConfiguration;
 import org.hibernate.SessionFactory;
@@ -20,8 +20,8 @@ import java.math.BigInteger;
 //@RunWith(SpringRunner.class)
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=AppConfiguration.class)
-@TestPropertySource("settings/test.properties")
-@Sql({"settings/create.sql", "settings/insert.sql"})
+@TestPropertySource("../settings/test.properties")
+@Sql({"../settings/create.sql", "../settings/insert.sql"})
 @Transactional
 public abstract class DBAbstract {
 
