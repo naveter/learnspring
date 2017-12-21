@@ -16,7 +16,7 @@
 
     <context:property-placeholder location="classpath:app.properties"/>
 
-    <!--<bean class="learnspring.myblog.extra.InstantiationTracingBeanPostProcessor"/>-->
+    <bean class="learnspring.myblog.extra.InstantiationTracingBeanPostProcessor"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
