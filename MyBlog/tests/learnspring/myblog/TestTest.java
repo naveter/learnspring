@@ -1,7 +1,10 @@
 package learnspring.myblog;
 
+import learnspring.myblog.dao.CategoryDAO;
+import learnspring.myblog.dbitems.Category;
 import learnspring.myblog.extra.AppConfiguration;
 import org.hibernate.SessionFactory;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -17,29 +20,18 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.math.BigInteger;
 
-//@RunWith(SpringRunner.class)
-@RunWith(SpringJUnit4ClassRunner.class)
+import static org.junit.Assert.assertEquals;
+
+@RunWith(SpringRunner.class)
 @ContextConfiguration(classes=AppConfiguration.class)
-@TestPropertySource("settings/test.properties")
-@Sql({"settings/create.sql", "settings/insert.sql"})
-@Transactional
-public abstract class DBAbstract {
+public class TestTest {
 
     @Autowired
     private ApplicationContext applicationContext;
 
-    @PersistenceContext
-    private EntityManager em;
-
-    @Autowired
-    private SessionFactory sessionFactory;
-
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    protected int countRowsInTable(String tablename) {
-        BigInteger cnt = (BigInteger) em.createNativeQuery("select count(*) from " + tablename).getSingleResult();
-        return cnt.intValue();
+    @Test
+    public void saveTest(){
+        assertEquals("After save category", 1, 1);
     }
 
 }

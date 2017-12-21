@@ -12,7 +12,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@ImportResource("classpath*:dispatcher-servlet.xml")
+@ImportResource("classpath:dispatcher-servlet.xml")
 @PropertySource("classpath:app.properties")
 @EnableTransactionManagement
 public class AppConfiguration  {
