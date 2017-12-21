@@ -12,8 +12,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@ImportResource("WEB-INF/dispatcher-servlet.xml")
-@PropertySource("prop/app.properties")
+@ImportResource("classpath*:dispatcher-servlet.xml")
+@PropertySource("classpath:app.properties")
 @EnableTransactionManagement
 public class AppConfiguration  {
 

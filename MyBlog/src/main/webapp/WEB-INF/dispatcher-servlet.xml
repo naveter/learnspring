@@ -14,7 +14,7 @@
     <context:annotation-config/>
     <context:component-scan base-package="learnspring.myblog" />
 
-    <context:property-placeholder location="prop/app.properties"/>
+    <context:property-placeholder location="classpath:app.properties"/>
 
     <bean class="learnspring.myblog.extra.InstantiationTracingBeanPostProcessor"/>
 

@@ -668,7 +668,7 @@
       <workItem from="1512572709083" duration="2437000" />
       <workItem from="1512647374080" duration="43029000" />
       <workItem from="1513698636412" duration="14000" />
-      <workItem from="1513718605251" duration="1580000" />
+      <workItem from="1513718605251" duration="1694000" />
     </task>
     <task id="LOCAL-00001" summary="After set up Hibernate">
       <created>1512823762876</created>
@@ -727,7 +727,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54999000" />
+    <option name="totallyTimeSpent" value="55113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="1837" height="1060" extended-state="1" />
