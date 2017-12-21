@@ -4,7 +4,9 @@
     <title></title>
 </head>
 <body>
-<h1>Welcome SpingMVC Home Page!</h1>
+<h1>list of last posts</h1>
+<p>p=${p}</p>
+<p>${postsToString}</p>
 </body>
 </html>
 

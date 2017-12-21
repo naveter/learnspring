@@ -1,16 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>DAO</title>
+    <title></title>
 </head>
 <body>
-<h3>Show all users:</h3>
-<p> ${users} </p>
-<hr>
-
-
+<h1>post add form</h1>
 </body>
 </html>
-
-
 
