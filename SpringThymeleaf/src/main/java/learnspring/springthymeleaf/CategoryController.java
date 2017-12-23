@@ -11,11 +11,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class CategoryController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView main() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("userJSP", new User());
-        modelAndView.setViewName("index");
-        return modelAndView;
+    public String main(Model model) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("userJSP", new User());
+//        modelAndView.setViewName("index");
+
+        model.addAttribute("userJSP", new User());
+
+        return "index.html";
     }
 
     /*как только на index.jsp подтвердится форма

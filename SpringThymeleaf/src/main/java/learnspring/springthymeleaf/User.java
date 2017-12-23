@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 
-    private String name;
-    private String password;
+    private String name = "taras";
+    private String password ="passtaras";
 
     public String getName() {
         return name;
