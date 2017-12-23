@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1e82dec-afc9-4306-bda2-77bb5d50afd1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/controllers/CategoryController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/controllers/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/extra/Glob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/category.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/user.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/userAll.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/webapp/index.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyBlog/src/main/resources/app.properties" afterPath="$PROJECT_DIR$/../MyBlog/src/main/resources/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyBlog/tests/learnspring/myblog/IndexControllerTest.java" afterPath="$PROJECT_DIR$/../MyBlog/tests/learnspring/myblog/IndexControllerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/SpringThymeleaf.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/learnspring/springthymeleaf/AppConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/learnspring/springthymeleaf/CategoryController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/web/WEB-INF/dispatcher-servlet.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/web/WEB-INF/jsp/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/controllers/HomeController.java" afterPath="$PROJECT_DIR$/../MyBlog/src/main/java/learnspring/myblog/controllers/PostController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/dao.jsp" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/postAddForm.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/greeting.jsp" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/post.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/home.jsp" afterPath="$PROJECT_DIR$/../MyBlog/src/main/webapp/WEB-INF/jsp/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -165,8 +157,8 @@
       <file leaf-file-name="TestDatabase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/TestDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="50" column="63" lean-forward="false" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+            <state relative-caret-position="305">
+              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1513610994212" expanded="true" signature="1241:1266" ph="select * fro... user" />
@@ -261,7 +253,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="720" />
     <option name="y" value="23" />
     <option name="width" value="1837" />
@@ -678,7 +670,7 @@
     <option name="totallyTimeSpent" value="55725000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="1837" height="1060" extended-state="1" />
+    <frame x="720" y="23" width="1837" height="1060" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1213,7 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="77" lean-forward="false" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1264,8 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/learnspring/springcmd/TestDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="50" column="63" lean-forward="false" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+        <state relative-caret-position="305">
+          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1513610994212" expanded="true" signature="1241:1266" ph="select * fro... user" />
