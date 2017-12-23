@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
@@ -22,8 +23,6 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 
 @Configuration
 @ImportResource("/WEB-INF/dispatcher-servlet.xml")
-//@WebAppConfiguration
-//@EnableWebMvc
 public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
     private static final String UTF8 = "UTF-8";
@@ -59,7 +58,18 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         return resolver;
     }
 
-
+    @Override
+    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+//        super.addResourceHandlers(registry);
+        registry.addResourceHandler(
+                "/img/**",
+                "/css/**",
+                "/js/**")
+                .addResourceLocations(
+                        "classpath:/img/",
+                        "/css/",
+                        "/js/");
+    }
 
 
 
