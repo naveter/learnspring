@@ -7,26 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4979618-812f-4745-bbda-808120c9a843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/SpringThymeleaf.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/java/learnspring/springthymeleaf/AppConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/java/learnspring/springthymeleaf/CategoryController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/java/learnspring/springthymeleaf/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/web/WEB-INF/classes/logging.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/web/WEB-INF/dispatcher-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/web/WEB-INF/jsp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/web/WEB-INF/jsp/secondPage.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf/src/main/web/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/SpringThymeleaf2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/java/ru/javastudy/springMVC/controller/MainController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/java/ru/javastudy/springMVC/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/web/WEB-INF/classes/logging.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/web/WEB-INF/dispatcher-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/web/WEB-INF/views/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/web/WEB-INF/views/secondPage.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringThymeleaf2/src/main/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringCmd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SpringCmd/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -547,7 +527,7 @@
       <workItem from="1513701351112" duration="474000" />
       <workItem from="1513717776953" duration="701000" />
       <workItem from="1513862643955" duration="1627000" />
-      <workItem from="1514030498632" duration="344000" />
+      <workItem from="1514030498632" duration="436000" />
     </task>
     <task id="LOCAL-00001" summary="Before add aspectJ">
       <created>1512641638125</created>
@@ -604,11 +584,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52718000" />
+    <option name="totallyTimeSpent" value="52810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="13" width="1684" height="1077" extended-state="1" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

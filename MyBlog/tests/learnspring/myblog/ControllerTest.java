@@ -19,11 +19,12 @@ import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @ContextConfiguration(classes = AppConfiguration.class)
-public class IndexControllerTest {
+public class ControllerTest {
 
     @Autowired
     private WebApplicationContext wac;
@@ -38,11 +39,32 @@ public class IndexControllerTest {
 
     @Test
     public void testCreateSignupFormInvalidUser() throws Exception {
-        ResultMatcher ok = MockMvcResultMatchers.status().isOk();
+        MockHttpServletRequestBuilder builder;
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/greeting");
-        this.mockMvc.perform(builder)
-                .andExpect(ok);
+        builder = MockMvcRequestBuilders.get("/");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.get("/post/1");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.get("/post/add/form");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.post("/post/add");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.get("/category/1");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.get("/user/1");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.get("/user/1/all");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
+        builder = MockMvcRequestBuilders.get("/exception");
+        this.mockMvc.perform(builder).andExpect(status().isOk());
+
 
     }
 }
