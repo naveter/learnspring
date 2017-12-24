@@ -13,16 +13,12 @@ public class CategoryController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String main(Model model) {
+        model.addAttribute("content", "index");
         model.addAttribute("userJSP", new User());
 
-        return "index.html";
+        return "main";
     }
 
-    @RequestMapping(value = "/next")
-    public String checkUser(Model model) {
-        model.addAttribute("userJSP", new User());
 
-        return "common/next.html";
-    }
 
 }

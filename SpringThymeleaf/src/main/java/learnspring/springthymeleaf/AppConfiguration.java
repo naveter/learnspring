@@ -54,7 +54,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         resolver.setApplicationContext(applicationContext);
         resolver.setPrefix("/WEB-INF/templates/");
         resolver.setTemplateMode(TemplateMode.HTML);
-//        resolver.setSuffix(".html");
+        resolver.setSuffix(".html");
         return resolver;
     }
 

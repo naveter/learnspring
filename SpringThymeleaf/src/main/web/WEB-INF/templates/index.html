@@ -1,10 +1,16 @@
-<div class="seedstarterlist" xmlns:th="http://www.w3.org/1999/xhtml">
-
-    <h2>List of Seed Starters</h2>
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 
     <div th:text="${userJSP.name}">Date Planted</div>
     <div th:text="${userJSP.password}">Date Planted</div>
 
+    <p>Note that this specification of local variables for a fragment –
+        no matter whether it has an argument signature or not – does not cause the context to be emptied prior
+        to its execution. Fragments will still be able to access every context variable being used at
+        the calling template like they currently are.</p>
 
+    <p>Note that this specification of local variables for a fragment –
+        no matter whether it has an argument signature or not – does not cause the context to be emptied prior
+        to its execution. Fragments will still be able to access every context variable being used at
+        the calling template like they currently are.</p>
 
-</div>
+</th:block>
