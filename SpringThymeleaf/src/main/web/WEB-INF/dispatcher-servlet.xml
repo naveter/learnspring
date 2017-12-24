@@ -14,6 +14,10 @@
     <context:annotation-config/>
     <context:component-scan base-package="learnspring.springthymeleaf" />
 
+    <mvc:resources mapping="/js/**" location="/resources/js/" />
+    <mvc:resources mapping="/css/**" location="/resources/css/" />
+    <mvc:resources mapping="/img/**" location="/resources/img/" />
+
     <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
         <!--<property name="prefix" value="/WEB-INF/jsp/" />-->
         <!--<property name="suffix" value=".jsp" />-->

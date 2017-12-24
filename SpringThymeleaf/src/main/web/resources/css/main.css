@@ -1,0 +1,36 @@
+body {
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+}
+
+#header {
+    background: #ccc;
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+}
+
+#sidebar {
+    float: right;
+    width: 20%;
+    padding: 12px;
+    margin: 12px;
+}
+
+#content {
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+}
+
+#footer {
+    clear: right;
+    background: #eee;
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+    text-align: right;
+    color: #cccccc;
+}
+
+
