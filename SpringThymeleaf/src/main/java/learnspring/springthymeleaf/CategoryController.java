@@ -9,15 +9,27 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 //@RequestMapping("/")
 public class CategoryController {
 
+    @Autowired
+    ApplicationContext ac;
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String main(Model model) {
         model.addAttribute("content", "index");
         model.addAttribute("userJSP", new User());
+
+        String name = ac.getMessage("customer.name",
+                new Object[] { 28,"http://www.mkyong.com" }, new Locale("en_US"));
+        System.out.println("Customer name (English) : " + name);
+
+        name = ac.getMessage("customer.name",
+                new Object[] { 28,"http://www.mkyong.com" }, new Locale("ru_RU"));
+        System.out.println("Customer name (Russian) : " + name);
 
         return "main";
     }
