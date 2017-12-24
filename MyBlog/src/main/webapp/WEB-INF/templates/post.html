@@ -1,0 +1,16 @@
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div class="post">
+        <h2 th:text="${post.title}">title</h2>
+        <div class="date">
+            By <span>
+                <a th:href="@{/user/{user_id}(user_id=${post.user_id})}"
+                   th:text="|${post.user.firstname} ${post.user.lastname}|">George Passas</a>
+            </span>,
+            <span th:text="${{post.created}}">12.12.2017 12:23</span>
+        </div>
+        <div class="body" th:utext="${post.body}">body</div>
+        <br><br>
+    </div>
+
+</th:block>

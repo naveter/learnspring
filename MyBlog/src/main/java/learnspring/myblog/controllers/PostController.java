@@ -6,24 +6,16 @@ import learnspring.myblog.dbitems.Post;
 import learnspring.myblog.extra.Glob;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class PostController {
+public class PostController extends AbstractController {
 
     private static final Logger LOGGER = Logger.getLogger(PostController.class);
-
-    @Autowired
-    private ApplicationContext ac;
-
-    @Autowired
-    PostDAO postDAO;
 
     @Autowired
     UserDAO userDAO;
@@ -34,12 +26,8 @@ public class PostController {
 
         List<Post> posts = postDAO.getAll(p, Glob.postPerPage);
 
-        StringBuilder out = new StringBuilder();
-        posts.stream().forEach(u -> out.append(u.toString() + "<br>" ));
-
         model.addAttribute("p", p );
         model.addAttribute("posts", posts );
-        model.addAttribute("postsToString", out.toString() );
         model.addAttribute("content", "index");
 
         return "main";
@@ -52,11 +40,10 @@ public class PostController {
 
         Post post = postDAO.findById(post_id);
 
-        model.addAttribute("post_id", post_id );
         model.addAttribute("post", post );
-        model.addAttribute("postToString", post.toString() );
+        model.addAttribute("content", "post");
 
-        return "post";
+        return "main";
     }
 
     @RequestMapping("/exception")
@@ -68,8 +55,9 @@ public class PostController {
 
     @GetMapping("/post/add/form")
     public String postAddForm(Model model){
+        model.addAttribute("content", "postAddForm");
 
-        return "postAddForm";
+        return "main";
     }
 
     @PostMapping("/post/add")
@@ -78,12 +66,7 @@ public class PostController {
         return "post";
     }
 
-    @ModelAttribute("sidebarPosts")
-    public List<Post> sidebar() {
-        List<Post> posts = postDAO.getAll(0, 10);
 
-        return posts;
-    }
 
 
 }

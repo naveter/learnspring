@@ -1,0 +1,15 @@
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div class="user">
+        <h2 th:text="|${user.firstname} ${user.lastname}|">Karl Petrov</h2>
+        <div class="date">Created
+            <span th:text="${{user.created}}">12.12.2017 12:23</span>,
+            last login <span th:text="${{user.lastlogin}}">12.12.2017 12:23</span>
+        </div>
+        <br><br>
+    </div>
+
+    <th:block th:replace="~{anouncePost.html}">
+    </th:block>
+
+</th:block>

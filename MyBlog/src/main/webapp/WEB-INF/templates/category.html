@@ -1,0 +1,11 @@
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div class="category">
+        <h2 th:text="|Category ${category.name}|">Politics</h2>
+        <br><br>
+    </div>
+
+    <th:block th:replace="~{anouncePost.html}">
+    </th:block>
+
+</th:block>

@@ -1,0 +1,30 @@
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div class="postAdd">
+        <h2>Add post</h2>
+        <br><br>
+        <form action="/post/add" method="POST">
+            <div>
+                <label for="title">Title:</label>
+                <input name="title" id="title" required size="89">
+            </div>
+            <div>
+                <label for="category_id">Category:</label>
+                <select name="category_id" id="category_id" required>
+                    <option value="t1">Чебурашка</option>
+                    <option value="t2">Крокодил Гена</option>
+                    <option value="t3">Шапокляк</option>
+                </select>
+            </div>
+            <div>
+                <label for="body">Text:</label>
+                <textarea name="body" id="body" rows="20" cols="80" required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+
+</th:block>

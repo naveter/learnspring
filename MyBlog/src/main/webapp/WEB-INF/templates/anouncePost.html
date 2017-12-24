@@ -1,0 +1,22 @@
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div class="anouncePost" th:each="post : ${posts}" th:unless="${#lists.isEmpty(posts)}">
+        <div>
+            <a th:href="@{/post/{post_id}(post_id=${post.id})}" class="title" th:text="${post.title}">Title</a>
+        </div>
+        <div class="date">
+            By <span>
+                <a th:href="@{/user/{user_id}(user_id=${post.user_id})}"
+                   th:text="|${post.user.firstname} ${post.user.lastname}|">George Passas</a>
+            </span>,
+            <span th:text="${{post.created}}">12.12.2017 12:23</span>
+        </div>
+        <div class="body" th:utext="${#strings.substring(post.body, 0, 400)}">body</div>
+        <br><br>
+    </div>
+
+    <div class="paginator">
+        Pages: <a href="">1</a> <a href="">2</a>
+    </div>
+
+</th:block>
