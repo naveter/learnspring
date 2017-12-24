@@ -1,18 +1,12 @@
 package learnspring.springthymeleaf;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
@@ -57,6 +51,11 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         resolver.setSuffix(".html");
         return resolver;
     }
+
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new RequestInterceptor());
+//    }
 
 
 

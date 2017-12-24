@@ -1,7 +1,9 @@
+<th:block xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <p><strong>SIDEBAR</strong></p>
-<ul>
-    <li><a href="#">Link Item 1</a></li>
-    <li><a href="#">Link Item 2</a></li>
-    <li><a href="#">Link Item 3</a></li>
-    <li><a href="#">Link Item 4</a></li>
+
+<ul th:each="item : ${sidebar}">
+    <li><a th:href="@{/{link}(link=${item[0]})}" th:text="${item[1]}">link</a></li>
 </ul>
+
+</th:block>
