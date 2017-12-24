@@ -2,11 +2,25 @@ package learnspring.myblog.extra;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.*;
+import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.templatemode.TemplateMode;
+import org.thymeleaf.templateresolver.ITemplateResolver;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -15,14 +29,22 @@ import javax.sql.DataSource;
 @ImportResource("classpath:dispatcher-servlet.xml")
 @PropertySource("classpath:app.properties")
 @EnableTransactionManagement
-public class AppConfiguration  {
+public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware  {
+
+    private static final String UTF8 = "UTF-8";
+
+    private ApplicationContext applicationContext;
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    public void setApplicationContext(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
-
-    @Autowired
-    private SessionFactory sessionFactory;
 
     @Bean
     public PlatformTransactionManager transactionManager() {
@@ -40,7 +62,50 @@ public class AppConfiguration  {
         return emf.createEntityManager();
     }
 
+    @Bean
+    public ViewResolver viewResolver() {
+        ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+        resolver.setTemplateEngine(templateEngine());
+        resolver.setCharacterEncoding(UTF8);
+        resolver.setOrder(2);
+//        resolver.setViewNames(new String[] {"*.html", "*.xhtml"});
+        return resolver;
+    }
 
+    private TemplateEngine templateEngine() {
+        SpringTemplateEngine engine = new SpringTemplateEngine();
+        engine.setTemplateResolver(templateResolver());
+        return engine;
+    }
+
+    private ITemplateResolver templateResolver() {
+        SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
+        resolver.setApplicationContext(applicationContext);
+        resolver.setPrefix("/WEB-INF/templates/");
+        resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setSuffix(".html");
+        return resolver;
+    }
+
+    @Bean
+    public MessageSource messageSource() {
+        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+        messageSource.setBasenames("locale", "locale/messages");
+        messageSource.setDefaultEncoding("UTF-8");
+
+        return messageSource;
+    }
+
+    @Override
+    public void addFormatters(final FormatterRegistry registry) {
+        super.addFormatters(registry);
+        registry.addFormatter(dateFormatter());
+    }
+
+    @Bean
+    public DateFormatter dateFormatter() {
+        return new DateFormatter();
+    }
 
 
 

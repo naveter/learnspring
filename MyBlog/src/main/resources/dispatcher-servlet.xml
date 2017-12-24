@@ -18,10 +18,10 @@
 
     <bean class="learnspring.myblog.extra.InstantiationTracingBeanPostProcessor"/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp" />
-    </bean>
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/WEB-INF/jsp/" />-->
+        <!--<property name="suffix" value=".jsp" />-->
+    <!--</bean>-->
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -43,6 +43,14 @@
             </props>
         </property>
     </bean>
+
+    <mvc:resources mapping="/js/**" location="/resources/js/" />
+    <mvc:resources mapping="/css/**" location="/resources/css/" />
+    <mvc:resources mapping="/img/**" location="/resources/img/" />
+
+    <mvc:interceptors>
+        <bean id="requestInterceptor" class="learnspring.myblog.extra.RequestInterceptor"/>
+    </mvc:interceptors>
 
 
 </beans>

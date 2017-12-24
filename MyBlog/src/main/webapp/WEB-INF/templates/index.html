@@ -1,0 +1,11 @@
+<th:block xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+    <div th:each="post : ${posts}">
+        <div th:text="${{post.created}}">Date Planted</div>
+        <div th:text="${post.title}">Date Planted</div>
+        <div th:text="${#strings.substring(post.body, 0, 300)}">Date Planted</div>
+        <br><br>
+    </div>
+
+
+</th:block>

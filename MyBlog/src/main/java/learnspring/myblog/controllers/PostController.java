@@ -10,6 +10,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -18,7 +20,7 @@ public class PostController {
     private static final Logger LOGGER = Logger.getLogger(PostController.class);
 
     @Autowired
-    private ApplicationContext ctx;
+    private ApplicationContext ac;
 
     @Autowired
     PostDAO postDAO;
@@ -38,8 +40,9 @@ public class PostController {
         model.addAttribute("p", p );
         model.addAttribute("posts", posts );
         model.addAttribute("postsToString", out.toString() );
+        model.addAttribute("content", "index");
 
-        return "index";
+        return "main";
     }
 
     @GetMapping("/post/{post_id}")
@@ -73,6 +76,13 @@ public class PostController {
     public String postAdd(Model model){
 
         return "post";
+    }
+
+    @ModelAttribute("sidebarPosts")
+    public List<Post> sidebar() {
+        List<Post> posts = postDAO.getAll(0, 10);
+
+        return posts;
     }
 
 

@@ -1,0 +1,9 @@
+<th:block xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<p><strong>Last Posts</strong></p>
+
+<ul th:each="post : ${sidebarPosts}" >
+    <li><a th:href="@{/post/{post_id}(post_id=${post.id})}" th:text="${post.title}">link</a></li>
+</ul>
+
+</th:block>
