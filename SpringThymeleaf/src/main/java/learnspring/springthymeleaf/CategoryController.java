@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -22,6 +23,7 @@ public class CategoryController {
     public String main(Model model) {
         model.addAttribute("content", "index");
         model.addAttribute("userJSP", new User());
+        model.addAttribute("date", new Date());
 
         String name = ac.getMessage("customer.name",
                 new Object[] { 28,"http://www.mkyong.com" }, new Locale("en_US"));
@@ -30,6 +32,7 @@ public class CategoryController {
         name = ac.getMessage("customer.name",
                 new Object[] { 28,"http://www.mkyong.com" }, new Locale("ru_RU"));
         System.out.println("Customer name (Russian) : " + name);
+
 
         return "main";
     }
