@@ -50,16 +50,13 @@ public class ControllerTest {
         builder = MockMvcRequestBuilders.get("/post/add/form");
         this.mockMvc.perform(builder).andExpect(status().isOk());
 
-        builder = MockMvcRequestBuilders.post("/post/add");
-        this.mockMvc.perform(builder).andExpect(status().isOk());
+//        builder = MockMvcRequestBuilders.post("/post/add");
+//        this.mockMvc.perform(builder).andExpect(status().isOk());
 
         builder = MockMvcRequestBuilders.get("/category/1");
         this.mockMvc.perform(builder).andExpect(status().isOk());
 
         builder = MockMvcRequestBuilders.get("/user/1");
-        this.mockMvc.perform(builder).andExpect(status().isOk());
-
-        builder = MockMvcRequestBuilders.get("/user/1/all");
         this.mockMvc.perform(builder).andExpect(status().isOk());
 
         builder = MockMvcRequestBuilders.get("/exception");

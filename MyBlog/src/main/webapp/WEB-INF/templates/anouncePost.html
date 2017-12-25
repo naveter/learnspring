@@ -11,7 +11,9 @@
             </span>,
             <span th:text="${{post.created}}">12.12.2017 12:23</span>
         </div>
-        <div class="body" th:utext="${#strings.substring(post.body, 0, 400)}">body</div>
+        <div class="body" th:utext="(${#strings.length(post.body)} > 400)
+            ? ${#strings.substring(post.body, 0, 400)}
+            : ${post.body}">body</div>
         <br><br>
     </div>
 

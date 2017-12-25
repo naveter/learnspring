@@ -3,7 +3,7 @@
     <div class="postAdd">
         <h2>Add post</h2>
         <br><br>
-        <form action="/post/add" method="POST">
+        <form action="/post/add" method="POST" modelAttribute="Post">
             <div>
                 <label for="title">Title:</label>
                 <input name="title" id="title" required size="89">
@@ -11,9 +11,7 @@
             <div>
                 <label for="category_id">Category:</label>
                 <select name="category_id" id="category_id" required>
-                    <option value="t1">Чебурашка</option>
-                    <option value="t2">Крокодил Гена</option>
-                    <option value="t3">Шапокляк</option>
+                    <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}">cat</option>
                 </select>
             </div>
             <div>

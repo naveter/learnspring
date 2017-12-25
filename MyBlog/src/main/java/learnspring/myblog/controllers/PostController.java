@@ -2,14 +2,18 @@ package learnspring.myblog.controllers;
 
 import learnspring.myblog.dao.PostDAO;
 import learnspring.myblog.dao.UserDAO;
+import learnspring.myblog.dbitems.Category;
 import learnspring.myblog.dbitems.Post;
 import learnspring.myblog.extra.Glob;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -55,15 +59,31 @@ public class PostController extends AbstractController {
 
     @GetMapping("/post/add/form")
     public String postAddForm(Model model){
+        List<Category> categories = categoryDAO.getAll(0, Integer.MAX_VALUE);
+
+        model.addAttribute("categories", categories);
         model.addAttribute("content", "postAddForm");
 
         return "main";
     }
 
     @PostMapping("/post/add")
-    public String postAdd(Model model){
+    public String postAdd(@ModelAttribute("Post") Post post,
+                          BindingResult result, ModelMap model){
+        if (result.hasErrors()) {
+            List<Category> categories = categoryDAO.getAll(0, Integer.MAX_VALUE);
+            model.addAttribute("categories", categories);
+            model.addAttribute("content", "postAddForm");
+            return "main";
+        }
 
-        return "post";
+        System.out.println(post.toString());
+
+        post.setUser_id(2L);
+        post.setCreated(new Date());
+        post = postDAO.save(post);
+
+        return "redirect:/post/" + post.getId();
     }
 
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.List;
 
-public class AbstractController {
+public abstract class AbstractController {
 
     @Autowired
     private ApplicationContext ac;
