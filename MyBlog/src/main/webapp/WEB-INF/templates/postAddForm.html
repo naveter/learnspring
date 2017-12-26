@@ -2,21 +2,23 @@
 
     <div class="postAdd">
         <h2>Add post</h2>
-        <br><br>
+        <br>
+        <div class="error" th:text="${error}" th:if="${!#strings.isEmpty(error)}"></div>
+        <br>
         <form action="/post/add" method="POST" modelAttribute="Post">
             <div>
                 <label for="title">Title:</label>
-                <input name="title" id="title" required size="89">
+                <input name="title" id="title" size="89" th:value="(${post}!= null)?${post.title}:''">
             </div>
             <div>
                 <label for="category_id">Category:</label>
-                <select name="category_id" id="category_id" required>
-                    <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}">cat</option>
+                <select name="category_id" id="category_id">
+                    <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}" th:selected="((${post}!= null) and (${post.category_id} == ${category.id}))">cat</option>
                 </select>
             </div>
             <div>
                 <label for="body">Text:</label>
-                <textarea name="body" id="body" rows="20" cols="80" required></textarea>
+                <textarea name="body" id="body" rows="20" cols="80" th:text="(${post}!= null) ? ${post.body} : ''"></textarea>
             </div>
             <div>
                 <input type="submit" value="Submit">

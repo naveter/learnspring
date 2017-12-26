@@ -70,14 +70,23 @@ public class PostController extends AbstractController {
     @PostMapping("/post/add")
     public String postAdd(@ModelAttribute("Post") Post post,
                           BindingResult result, ModelMap model){
-        if (result.hasErrors()) {
+
+        String error = "";
+        if (post.getTitle().isEmpty() || post.getTitle().length() < 5) {
+            error = "Title must be greater 5 symbols";
+        }
+        if (post.getBody().isEmpty() || post.getBody().length() < 50) {
+            error = "Too short text";
+        }
+
+        if (!error.isEmpty()) {
             List<Category> categories = categoryDAO.getAll(0, Integer.MAX_VALUE);
+            model.addAttribute("error", error);
+            model.addAttribute("post", post);
             model.addAttribute("categories", categories);
             model.addAttribute("content", "postAddForm");
             return "main";
         }
-
-        System.out.println(post.toString());
 
         post.setUser_id(2L);
         post.setCreated(new Date());
