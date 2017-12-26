@@ -1,18 +1,20 @@
 <th:block xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-<a th:href="@{/}">Index page</a><br>
-<a th:href="@{/post/add/form}">New Post</a>
+    <th:block id="auth" th:insert="~{auth.html}"></th:block>
 
-<p><strong>Categories</strong></p>
+    <a th:href="@{/}">Index page</a><br>
+    <a th:href="@{/post/add/form}">New Post</a>
 
-<ul th:each="category : ${sidebarCategories}" >
-    <li><a th:href="@{/category/{category_id}(category_id=${category.id})}" th:text="${category.name}">link</a></li>
-</ul>
+    <p><strong>Categories</strong></p>
 
-<p><strong>Last Posts</strong></p>
+    <ul th:each="category : ${sidebarCategories}" >
+        <li><a th:href="@{/category/{category_id}(category_id=${category.id})}" th:text="${category.name}">link</a></li>
+    </ul>
 
-<ul th:each="post : ${sidebarPosts}" >
-    <li><a th:href="@{/post/{post_id}(post_id=${post.id})}" th:text="${post.title}">link</a></li>
-</ul>
+    <p><strong>Last Posts</strong></p>
+
+    <ul th:each="post : ${sidebarPosts}" >
+        <li><a th:href="@{/post/{post_id}(post_id=${post.id})}" th:text="${post.title}">link</a></li>
+    </ul>
 
 </th:block>

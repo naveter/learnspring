@@ -1,0 +1,8 @@
+<span th:if="${#httpServletRequest.remoteUser != null}" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <span th:text="${#httpServletRequest.remoteUser}">
+        sample_user
+    </span>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Log out" />
+    </form>
+</span>
