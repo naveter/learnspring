@@ -59,8 +59,8 @@ public class ControllerTest {
         builder = MockMvcRequestBuilders.get("/user/1");
         this.mockMvc.perform(builder).andExpect(status().isOk());
 
-        builder = MockMvcRequestBuilders.get("/exception");
-        this.mockMvc.perform(builder).andExpect(status().isOk());
+//        builder = MockMvcRequestBuilders.get("/exception");
+//        this.mockMvc.perform(builder).andExpect(status().isOk());
 
 
     }
