@@ -27,22 +27,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "select username, role from user_roles where username=?");
     }
 
-//    @Bean
-//    public UserDetailsService userDetailsService()  {
-//
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        manager.createUser(User.withUsername("user").password("password").roles("USER").build());
-//        manager.createUser(User.withUsername("admin").password("password").roles("ADMIN", "USER").build());
-//
-//        return manager;
-//    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
                 .antMatchers("/post/add", "/post/add/form").hasRole("USER")
-                .antMatchers("/post/*", "/user/**",
+                .antMatchers("/post/*", "/user/**", "/rest/**",
                         "/category/**", "/", "/css/**", "/js/**", "/img/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
