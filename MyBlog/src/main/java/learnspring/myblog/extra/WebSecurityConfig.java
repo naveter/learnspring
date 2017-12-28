@@ -28,7 +28,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/post/add", "/post/add/form").hasRole("USER")
                 .antMatchers("/post/*", "/user/**",
                         "/category/**", "/", "/css/**", "/js/**", "/img/**").permitAll()
-
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
@@ -36,8 +35,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login").permitAll()
                 .failureUrl("/login-error").permitAll()
                 .and()
-                .logout()
-                .logoutSuccessUrl("/");
+                .logout().logoutSuccessUrl("/")
+                .and()
+                .exceptionHandling().accessDeniedPage("/error403");
     }
 
 }
