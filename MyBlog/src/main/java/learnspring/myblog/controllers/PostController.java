@@ -95,7 +95,18 @@ public class PostController extends AbstractController {
         return "redirect:/post/" + post.getId();
     }
 
+    @RequestMapping("/login")
+    public String login(Model model) {
+        model.addAttribute("content", "login");
+        return "main";
+    }
 
+    @RequestMapping("/login-error")
+    public String loginError(Model model) {
+        model.addAttribute("loginError", true);
+        model.addAttribute("content", "login");
+        return "main";
+    }
 
 
 }

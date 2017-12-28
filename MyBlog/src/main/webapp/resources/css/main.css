@@ -11,10 +11,9 @@ body {
 }
 
 #sidebar {
-    float: right;
-    width: 20%;
     padding: 12px;
     margin: 12px;
+    border: 1px solid #0000FF;
 }
 
 #content {
@@ -55,7 +54,8 @@ body {
     margin: 15px;
     font-weight: bold;
 }
-.error {
-    color: #FF0000;
+.maintable {
+    padding-left:10px;
+    padding-right:10px;
+    font-size: 12px;
 }
-

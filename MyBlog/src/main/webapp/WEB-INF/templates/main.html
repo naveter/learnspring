@@ -12,13 +12,20 @@
     <span class="titleHeader">MyBlog</span>
 </div>
 
-<div id="sidebar" th:insert="~{sidebar.html}">
+<table class="maintable" width="100%">
+    <tr>
+        <td id="content" width="*" valign="top">
 
-</div>
+            <div th:insert="${content}"></div>
 
-<div id="content" th:insert="${content}">
+        </td>
+        <td id="sidebar" width="200px" valign="top">
 
-</div>
+            <div th:insert="~{sidebar.html}"></div>
+
+        </td>
+    </tr>
+</table>
 
 <div id="footer">
     © 2017 All Rights Reserved.
