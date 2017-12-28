@@ -1,4 +1,5 @@
-<th:block xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<th:block xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+          xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <span th:if="${#httpServletRequest.remoteUser != null}">
     <b><span th:text="${#httpServletRequest.remoteUser}">
@@ -9,6 +10,18 @@
     </form><br>
     <a th:href="@{/post/add/form}">New Post</a><br>
 </span>
+
+<div>
+    <span sec:authorize="isAuthenticated()">
+        Is authorized<br>
+    </span>
+    <span sec:authorize="hasRole('ADMIN')">
+        <a th:href="@{/admin}">Admin page</a><br>
+    </span>
+    <span sec:authorize="hasRole('USER')">
+        Is user role
+    </span>
+</div>
 
 <span th:if="${#httpServletRequest.remoteUser == null}">
     <a th:href="@{/login}">Log in</a>

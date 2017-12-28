@@ -18,15 +18,20 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.dialect.IDialect;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
+import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.util.HashSet;
+import java.util.Set;
 
 @Configuration
 @ImportResource("classpath:dispatcher-servlet.xml")
@@ -49,14 +54,6 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
-
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth
-//                .inMemoryAuthentication()
-//                .withUser("user").password("password").roles("USER");
-//
-//    }
 
     @Bean
     public PlatformTransactionManager transactionManager() {
@@ -87,6 +84,12 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     private TemplateEngine templateEngine() {
         SpringTemplateEngine engine = new SpringTemplateEngine();
         engine.setTemplateResolver(templateResolver());
+
+        Set<IDialect> dialects = new HashSet<>();
+        SpringSecurityDialect ssd = new SpringSecurityDialect();
+        dialects.add(ssd);
+        engine.setAdditionalDialects(dialects);
+
         return engine;
     }
 
