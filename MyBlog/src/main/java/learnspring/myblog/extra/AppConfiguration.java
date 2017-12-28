@@ -11,6 +11,7 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -31,7 +32,7 @@ import javax.sql.DataSource;
 @ImportResource("classpath:dispatcher-servlet.xml")
 @PropertySource("classpath:app.properties")
 @EnableTransactionManagement
-@EnableWebSecurity
+//@EnableWebSecurity
 public class AppConfiguration extends WebMvcConfigurerAdapter implements ApplicationContextAware  {
 
     private static final String UTF8 = "UTF-8";
@@ -49,12 +50,13 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         return sessionFactory;
     }
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
-    }
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+//        auth
+//                .inMemoryAuthentication()
+//                .withUser("user").password("password").roles("USER");
+//
+//    }
 
     @Bean
     public PlatformTransactionManager transactionManager() {
