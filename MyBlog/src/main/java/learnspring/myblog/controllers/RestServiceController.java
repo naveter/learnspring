@@ -3,6 +3,7 @@ package learnspring.myblog.controllers;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import learnspring.myblog.dao.CategoryDAO;
 import learnspring.myblog.dao.PostDAO;
 import learnspring.myblog.dbitems.Category;
 import learnspring.myblog.dbitems.Post;
@@ -18,10 +19,19 @@ public class RestServiceController {
     @Autowired
     PostDAO postDAO;
 
+    @Autowired
+    CategoryDAO categoryDAO;
+
     @GetMapping("/")
     public List<Post> index(@RequestParam(value="p", required=false, defaultValue="0") int p) {
         List<Post> posts = postDAO.getAll(p, Glob.postPerPage);
         return posts;
+    }
+
+    @GetMapping("/categories")
+    public List<Category> categories() {
+        List<Category> categories = categoryDAO.getAll(0, Glob.postPerPage);
+        return categories;
     }
 
     @GetMapping("/post")

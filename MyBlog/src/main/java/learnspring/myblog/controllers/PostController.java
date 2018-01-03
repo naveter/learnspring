@@ -50,6 +50,19 @@ public class PostController extends AbstractController {
         return "main";
     }
 
+    @GetMapping("/post/{post_id}/pdf")
+    public String postPdf(
+            @PathVariable int post_id,
+            Model model) {
+
+        Post post = postDAO.findById(post_id);
+
+        model.addAttribute("post", post );
+        model.addAttribute("content", "post");
+
+        return "main";
+    }
+
     @GetMapping("/post/add/form")
     public String postAddForm(Model model){
         List<Category> categories = categoryDAO.getAll(0, Integer.MAX_VALUE);
