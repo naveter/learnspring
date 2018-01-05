@@ -11,7 +11,7 @@
         </div>
         <div class="body" th:utext="${post.body}">body</div>
         <br><br>
-        <a th:href="@{/post/{post_id}(post_id=${post.id})}">
+        <a th:href="@{/post/{post_id}/pdf(post_id=${post.id})}">
             <img th:src="@{/img/pdffile.32x32.png}" valign="middle"> Import to PDF
         </a>
     </div>

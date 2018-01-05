@@ -5,6 +5,17 @@ import learnspring.myblog.dao.UserDAO;
 import learnspring.myblog.dbitems.Category;
 import learnspring.myblog.dbitems.Post;
 import learnspring.myblog.extra.Glob;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.JasperRunManager;
+import net.sf.jasperreports.engine.export.HtmlExporter;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.export.SimpleExporterInput;
+import net.sf.jasperreports.export.SimpleHtmlExporterOutput;
+import net.sf.jasperreports.export.SimpleHtmlReportConfiguration;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +24,17 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.List;
+import java.io.File;
+import java.sql.Connection;
+
+import javax.naming.NamingException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.*;
 
 @Controller
 public class PostController extends AbstractController {
@@ -53,14 +73,51 @@ public class PostController extends AbstractController {
     @GetMapping("/post/{post_id}/pdf")
     public String postPdf(
             @PathVariable int post_id,
-            Model model) {
+            Model model, HttpServletRequest request,HttpServletResponse response) throws ParseException {
 
         Post post = postDAO.findById(post_id);
+        HashMap<String,Object> hmParams=new HashMap<String,Object>();
+        hmParams.put("TITLE", new String(post.getTitle()));
+        hmParams.put("BODY", new String(post.getBody()));
+        hmParams.put("CREATED", new String(post.getCreated().toString()));
 
-        model.addAttribute("post", post );
-        model.addAttribute("content", "post");
+        try {
 
-        return "main";
+            JasperReport jasperReport = getCompiledFile("jr", request);
+            generateReportPDF(response, hmParams, jasperReport, null);
+
+        } catch (Exception sqlExp) {
+            System.out.println("Exception::" + sqlExp.toString());
+        }
+
+        return null;
+    }
+
+    private JasperReport getCompiledFile(String fileName, HttpServletRequest request) throws JRException {
+
+        File reportFile = new File( request.getSession().getServletContext().getRealPath(fileName + ".jasper"));
+
+        if (!reportFile.exists()) {
+            JasperCompileManager.compileReportToFile(
+                    request.getSession().getServletContext().getRealPath(fileName + ".jrxml"),
+                    request.getSession().getServletContext().getRealPath(fileName + ".jasper")
+            );
+        }
+        JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile(reportFile.getPath());
+        return jasperReport;
+    }
+
+    private void generateReportPDF (HttpServletResponse resp, Map parameters, JasperReport jasperReport, Connection conn)throws JRException, NamingException, SQLException, IOException {
+        byte[] bytes = null;
+        bytes = JasperRunManager.runReportToPdf(jasperReport,parameters);
+        resp.reset();
+        resp.resetBuffer();
+        resp.setContentType("application/pdf");
+        resp.setContentLength(bytes.length);
+        ServletOutputStream ouputStream = resp.getOutputStream();
+        ouputStream.write(bytes, 0, bytes.length);
+        ouputStream.flush();
+        ouputStream.close();
     }
 
     @GetMapping("/post/add/form")

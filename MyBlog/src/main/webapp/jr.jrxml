@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport
+        xmlns="http://jasperreports.sourceforge.net/jasperreports"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+        http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+        name="StockReport" pageWidth="500" pageHeight="600"
+        columnWidth="450" leftMargin="5" rightMargin="5" topMargin="10" bottomMargin="1">
+
+    <parameter  name="TITLE" class="java.lang.String"/>
+    <parameter  name="BODY" class="java.lang.String"/>
+    <parameter  name="CREATED" class="java.lang.String"/>
+    <title>
+        <band height="50" splitType="Stretch">
+            <textField isBlankWhenNull="false">
+                <reportElement x="0" y="5" width="490" height="30"/>
+                <textFieldExpression class="java.lang.String"><![CDATA["Employees  " +$P{TITLE}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement mode="Opaque" x="0" y="5" width="490" height="15" forecolor="#FFFFFF" backcolor="#777765"/>
+                <textFieldExpression class="java.lang.String"><![CDATA["Employees  who are working more than  "]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="20" splitType="Stretch">
+            <staticText>
+                <reportElement mode="Opaque" x="0" y="4" width="100" height="15" backcolor="#CBB453"/>
+                <textElement textAlignment="Left"/>
+                <text>
+                    <![CDATA["Employee Code"]]>
+                </text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" mode="Opaque" x="100" y="4" width="170" height="15" backcolor="#CBB453"/>
+                <text>
+                    <![CDATA["Employee Name"]]>
+                </text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="51" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA["Employee"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="100" y="0" width="100" height="20"/>
+                <textElement/>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA["Employee"]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
