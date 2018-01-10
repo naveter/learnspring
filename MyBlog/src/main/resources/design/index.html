@@ -1,0 +1,165 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xml:lang="en" lang="en">
+<head>
+<title>MyBlog</title>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<script src="/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<style type="text/css" media="screen">
+body {
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+}
+
+#header {
+	background: #FFFFFF;
+	padding: 12px;
+	margin: 12px;
+	border: 1px solid #0000FF;
+}
+
+#sidebar {
+	padding: 12px;
+	margin: 12px;
+	border: 1px solid #0000FF;
+}
+
+#content {
+	padding: 12px;
+	margin: 12px;
+	border: 1px solid #0000FF;
+}
+
+#footer {
+	clear: right;
+	background: #eee;
+	padding: 12px;
+	margin: 12px;
+	border: 1px solid #0000FF;
+	text-align: right;
+	color: #cccccc;
+}
+.titleHeader {
+	font-size:30px; 
+	font-weight: bold;
+	padding-left: 50px;
+}
+.anouncePost .title {
+	font-size:16px; 
+	font-weight: bold;
+}
+.anouncePost div, .post div {
+	margin-bottom: 10px;
+}
+.anouncePost .date, .post .date, .user .date {
+	font-size: 10px; 
+	color: #acacac;
+}
+.paginator {
+	text-align: center;
+}
+.postAdd div {
+	margin: 15px;
+	font-weight: bold;
+}
+.maintable {
+	padding-left:10px; 
+	padding-right:10px; 
+	font-size: 12px;
+}
+.error {
+	color:#FF0000;
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<img src="./spring-logo.jpg" valign="middle" >&nbsp;&nbsp;
+<span class="titleHeader">MyBlog</span>
+</div>
+
+<table class="maintable" width="100%">
+<tr>
+
+<td id="content" width="*" valign="top">
+    <div class="anouncePost">
+        <div><a href="/post/1" class="title">Как нам обустроить Россию</a></div>
+		<div class="date">By <span><a href="/user/1">George Passas</a></span>, <span>12.12.2017 12:23</span></div>
+        <div class="body">Как нам обустроить Россию (КНОР) — клинический тест, позволяющий с высокой степенью надежности диагностировать у поциэнта инкурабельный ФГМ и превышение уровня ЧСВ в 9000 единиц. Результат теста считается положительным при сочетании следующих симптомов: Субъект ВНЕЗАПНО открывает свой собстве ...</div>
+        <br><br>
+    </div>
+	
+	<div class="anouncePost">
+        <div><a href="/post/1" class="title">Как нам обустроить Россию</a></div>
+		<div class="date">By <span><a href="/user/1">George Passas</a></span>, <span>12.12.2017 12:23</span></div>
+        <div class="body">Как нам обустроить Россию (КНОР) — клинический тест, позволяющий с высокой степенью надежности диагностировать у поциэнта инкурабельный ФГМ и превышение уровня ЧСВ в 9000 единиц. Результат теста считается положительным при сочетании следующих симптомов: Субъект ВНЕЗАПНО открывает свой собстве ...</div>
+        <br><br>
+    </div>
+	
+	<div class="post">
+		<h2>Как нам обустроить Россию</h2>
+        <div class="date">By <span><a href="/user/1">George Passas</a></span>, <span>12.12.2017 12:23</span></div>
+        <div class="body">Как нам обустроить Россию (КНОР) — клинический тест, позволяющий с высокой степенью надежности диагностировать у поциэнта инкурабельный ФГМ и превышение уровня ЧСВ в 9000 единиц. Результат теста считается положительным при сочетании следующих симптомов: Субъект ВНЕЗАПНО открывает свой собстве </div>
+        <br><br>
+    </div>
+	
+	<div class="paginator">
+		Pages: <a href="">1</a> <a href="">2</a>
+	</div>
+	
+	<div class="user">
+		<h2>Karl Petrov</h2>
+        <div class="date">Created <span>12.12.2017 12:23</span>, last login <span>12.12.2017 12:23</span></div>
+        <br><br>
+    </div>
+	
+	<div class="category">
+		<h2>Politics</h2>
+        <br><br>
+    </div>
+	
+	<div class="postAdd">
+		<h2>Add post</h2>
+        <br><br>
+		<form action="/post/add" method="POST">
+			<div>
+				<label for="title">Title:</label>
+				<input name="title" id="title" required size="89">
+			</div>
+			<div>
+				<label for="category_id">Category:</label>
+				<select name="category_id" id="category_id" required>
+				   <option value="t1">Чебурашка</option>
+				   <option value="t2">Крокодил Гена</option>
+				   <option value="t3">Шапокляк</option>
+				</select>
+			</div>			
+			<div>
+				<label for="body">Text:</label>
+				<textarea name="body" id="body" rows="20" cols="80" required></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Submit">
+			</div>			
+			
+		</form>
+    </div>
+	
+	</td>
+	<td id="sidebar" width="200px" valign="top">
+	<p><strong>SIDEBAR</strong></p>
+	<ul>
+		<li><a href="#">Link Item 1</a></li>
+		<li><a href="#">Link Item 2</a></li>
+		<li><a href="#">Link Item 3</a></li>
+		<li><a href="#">Link Item 4</a></li>
+	</ul>
+</td>
+	</tr>
+</table>
+
+<div id="footer">
+© 2017 All Rights Reserved. 
+</div>
+</body>
+</html>
