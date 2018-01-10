@@ -9,6 +9,15 @@
     <version>1.0</version>
     <name>JavaEEWeb Maven Webapp</name>
 
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <hibernate.version>5.2.12.Final</hibernate.version>
+        <postgresql.version>9.2-1002.jdbc4</postgresql.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <jackson.library>2.7.5</jackson.library>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -22,10 +31,30 @@
             <version>2.5</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>JavaEEWeb</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
