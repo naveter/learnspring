@@ -30,4 +30,8 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
+    <listener>
+        <listener-class>JavaEEWeb.AttributeListener</listener-class>
+    </listener>
+
 </web-app>

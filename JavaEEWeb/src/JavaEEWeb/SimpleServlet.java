@@ -27,5 +27,9 @@ public class SimpleServlet extends HttpServlet {
     private void process(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setStatus(200);
         response.getWriter().write(responseTemplate);
+
+        request.setAttribute("firstName", "prasad");
+        request.setAttribute("firstName", "pranil");
+        request.removeAttribute("firstName");
     }
 }
