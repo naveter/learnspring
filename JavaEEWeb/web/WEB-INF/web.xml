@@ -34,4 +34,8 @@
         <listener-class>JavaEEWeb.AttributeListener</listener-class>
     </listener>
 
+    <listener>
+        <listener-class>JavaEEWeb.RequestListener</listener-class>
+    </listener>
+
 </web-app>
