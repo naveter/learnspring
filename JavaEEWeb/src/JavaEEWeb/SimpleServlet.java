@@ -1,6 +1,7 @@
 package JavaEEWeb;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +11,7 @@ public class SimpleServlet extends HttpServlet {
 
     //Now we can call the methods of ServletConfig interface
     public ServletConfig servletConfig = this.getServletConfig();
+    public ServletContext context = getServletContext();
 
     private String responseTemplate =
             "<html>\n" +
