@@ -16,5 +16,6 @@
     </environments>
     <mappers>
         <mapper resource="BlogMapper.xml"/>
+        <mapper class="learnspring.springmybatis.BlogMapperI"/>
     </mappers>
 </configuration>

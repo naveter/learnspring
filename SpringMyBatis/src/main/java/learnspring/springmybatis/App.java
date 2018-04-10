@@ -33,7 +33,11 @@ public class App {
         SqlSession session = sqlSessionFactory.openSession();
         try {
             User blog = session.selectOne("learnspring.springmybatis.BlogMapper.selectBlog", 1);
-            System.out.println(blog.getFirstname() + blog.getLastname());
+            System.out.println(blog.getFirstname() + " " + blog.getLastname());
+
+            BlogMapperI mapper = session.getMapper(BlogMapperI.class);
+            User blog2 = mapper.selectBlog(2);
+            System.out.println(blog2.getFirstname() + " " + blog2.getLastname());
 
         } finally {
             session.close();
