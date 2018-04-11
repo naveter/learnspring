@@ -4,7 +4,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="learnspring.springmybatis.BlogMapper">
+
     <select id="selectBlog" resultType="learnspring.springmybatis.User">
         select * from public.user u where id = #{id}
     </select>
+
+    <resultMap type="learnspring.springmybatis.User" id="usermap2">
+        <id column="id" property="id"/>
+        <result column="firstname" property="firstname"/>
+        <result column="lastname" property="lastname"/>
+        <result column="created" property="created"/>
+        <result column="sex" property="sex"/>
+    </resultMap>
+
+    <select id="getUser2" resultMap="usermap2">
+        select * from public.user where id = #{id,javaType=int,jdbcType=NUMERIC}
+    </select>
+    <insert id="insertUser2">
+        insert into public.user (id, firstname, lastname, created, sex) values (
+        #{id}, #{firstname}, #{lastname}, #{created}, #{sex}
+        )
+    </insert>
+
 </mapper>
