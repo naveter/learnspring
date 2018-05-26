@@ -1,0 +1,65 @@
+body {
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+}
+
+#header {
+    background: #FFFFFF;
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+}
+
+#sidebar {
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+}
+
+#content {
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+}
+
+#footer {
+    clear: right;
+    background: #eee;
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid #0000FF;
+    text-align: right;
+    color: #cccccc;
+}
+.titleHeader {
+    font-size:30px;
+    font-weight: bold;
+    padding-left: 50px;
+}
+.anouncePost .title {
+    font-size:16px;
+    font-weight: bold;
+}
+.anouncePost div, .post div {
+    margin-bottom: 10px;
+}
+.anouncePost .date, .post .date, .user .date {
+    font-size: 10px;
+    color: #acacac;
+}
+.paginator {
+    text-align: center;
+}
+.postAdd div {
+    margin: 15px;
+    font-weight: bold;
+}
+.maintable {
+    padding-left:10px;
+    padding-right:10px;
+    font-size: 12px;
+}
+.error {
+    color:#FF0000;
+}
+

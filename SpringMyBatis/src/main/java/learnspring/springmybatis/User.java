@@ -1,20 +1,15 @@
 package learnspring.springmybatis;
 
-public class User {
+import java.util.Date;
 
-    public int id;
-    public String firstname;
-    public String lastname;
-    String created;
-    byte sex;
+public class User extends DBEntity {
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private String firstname;
+    private String lastname;
+    private Date created;
+    private String login;
+    private String password;
+    private Date lastlogin;
 
     public String getFirstname() {
         return firstname;
@@ -32,20 +27,44 @@ public class User {
         this.lastname = lastname;
     }
 
-    public String getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(String created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    public byte getSex() {
-        return sex;
+    public String getLogin() {
+        return login;
     }
 
-    public void setSex(byte sex) {
-        this.sex = sex;
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", login='" + login + '\'';
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Date getLastlogin() {
+        return lastlogin;
+    }
+
+    public void setLastlogin(Date lastlogin) {
+        this.lastlogin = lastlogin;
     }
 
 }

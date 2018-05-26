@@ -12,8 +12,22 @@ import java.util.List;
 @RequestMapping("/rest")
 public class RestServiceController {
 
-    @GetMapping("/first")
+    @GetMapping("/index")
     public List<First> index(@RequestParam(value="p", required=false, defaultValue="0") int p) {
+        List<First> list = new ArrayList<>();
+
+        list.add(new First("Al", "Patifon"));
+        list.add(new First("Semenov", "Stas"));
+        list.add(new First("Garelian", "Tarogat"));
+        list.add(new First("Darionov", "Kurkumatium"));
+        list.add(new First("Lonelies", "Coco"));
+        list.add(new First("Molotovich", "Hans"));
+
+        return list;
+    }
+
+    @GetMapping("/first")
+    public List<First> first(@RequestParam(value="p", required=false, defaultValue="0") int p) {
         List<First> list = new ArrayList<>();
 
         list.add(new First("Petrov", "Ivan"));
@@ -25,7 +39,7 @@ public class RestServiceController {
     }
 
     @GetMapping("/second")
-    public List<Second> categories() {
+    public List<Second> second() {
         List<Second> list = new ArrayList<>();
 
         list.add(new Second("Karaseiv", "Parata"));

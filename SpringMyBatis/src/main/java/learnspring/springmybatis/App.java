@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.InputStream;
+import java.util.List;
 
 import static org.apache.ibatis.jdbc.SelectBuilder.*;
 
@@ -35,15 +36,25 @@ public class App {
 
         SqlSession session = sqlSessionFactory.openSession();
         try {
-            User blog = session.selectOne("learnspring.springmybatis.BlogMapper.selectBlog", 1);
-            System.out.println(blog.getFirstname() + " " + blog.getLastname());
+//            User blog = session.selectOne("learnspring.springmybatis.BlogMapper.selectBlog", 1);
+//            System.out.println(blog.getFirstname() + " " + blog.getLastname());
 
-            BlogMapperI mapper = session.getMapper(BlogMapperI.class);
-            User blog2 = mapper.selectBlog(2);
-            System.out.println(blog2.getFirstname() + " " + blog2.getLastname());
+            List<Post> posts = session.selectList("learnspring.springmybatis.BlogMapper.selectPosts");
+            for (Post p : posts) {
+                System.out.println(p.getTitle() + " "
+                        + p.getCategory().getName()
+                        + " " + p.getUser().getLastname()
+                        + " " + p.getCreated()
+                        + " " + p.getUser().getCreated()
+                );
+            }
 
-            User blog3 = session.selectOne("learnspring.springmybatis.BlogMapper.getUser2", 3);
-            System.out.println(blog3.getFirstname() + " " + blog3.getLastname());
+//            BlogMapperI mapper = session.getMapper(BlogMapperI.class);
+//            User blog2 = mapper.selectBlog(2);
+//            System.out.println(blog2.getFirstname() + " " + blog2.getLastname());
+//
+//            User blog3 = session.selectOne("learnspring.springmybatis.BlogMapper.getUser2", 3);
+//            System.out.println(blog3.getFirstname() + " " + blog3.getLastname());
 
         } finally {
             session.close();

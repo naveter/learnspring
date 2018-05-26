@@ -14,7 +14,6 @@
         <result column="firstname" property="firstname"/>
         <result column="lastname" property="lastname"/>
         <result column="created" property="created"/>
-        <result column="sex" property="sex"/>
     </resultMap>
 
     <select id="getUser2" resultMap="usermap2">
@@ -25,5 +24,28 @@
         #{id}, #{firstname}, #{lastname}, #{created}, #{sex}
         )
     </insert>
+
+    <select id="selectPosts" resultMap="postsResultMap">
+        select p.*, u.*, c.*
+        , p.created as post_created, u.created as user_created
+        from public.post p
+        join public.user u on u.id = p.user_id
+        join public.category c on c.id = p.category_id
+        LIMIT 2
+    </select>
+
+    <resultMap id="postsResultMap" type="learnspring.springmybatis.Post" autoMapping="true">
+        <!--<id property="id" column="id" />-->
+        <result property="created" column="post_created" />
+        <association property="user" column="user_id"
+                     javaType="learnspring.springmybatis.User" autoMapping="true">
+            <!--<id property="id" column="user_id" />-->
+            <result property="created" column="user_created" />
+        </association>
+        <association property="category" column="category_id"
+                     javaType="learnspring.springmybatis.Category" autoMapping="true">
+            <!--<id property="id" column="category_id" />-->
+        </association>
+    </resultMap>
 
 </mapper>

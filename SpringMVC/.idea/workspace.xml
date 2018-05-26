@@ -7,44 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4979618-812f-4745-bbda-808120c9a843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/aopalliance-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/commons-logging-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-aop-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-aspects-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-beans-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-context-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-context-support-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-core-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-expression-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-instrument-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-instrument-tomcat-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-jdbc-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-jms-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-messaging-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-orm-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-oxm-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-test-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-tx-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-web-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-webmvc-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-webmvc-portlet-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-websocket-4.3.13.RELEASE.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/img/pdffile.32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/img/spring-logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/First.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/HomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/RestServiceController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/Second.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/extra/AppConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/resources/app.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/SpringAngularJS.iml" afterPath="$PROJECT_DIR$/../SpringAngularJS/SpringAngularJS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/pom.xml" afterPath="$PROJECT_DIR$/../SpringAngularJS/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/html/first.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/html/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/html/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/html/second.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-aop-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-aspects-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-beans-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-context-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-context-support-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-core-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-expression-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-instrument-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-instrument-tomcat-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-jdbc-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-jms-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-messaging-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-orm-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-oxm-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-test-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-tx-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-web-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-webmvc-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-webmvc-portlet-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SpringAngularJS/lib/spring-websocket-4.3.13.RELEASE.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/RestServiceController.java" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/java/learnspring/angularjs/RestServiceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/WEB-INF/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/js/main.js" afterPath="$PROJECT_DIR$/../SpringAngularJS/src/main/webapp/resources/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="410">
-              <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+              <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -207,7 +199,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="871" />
     <option name="y" value="3" />
     <option name="width" value="1684" />
@@ -631,7 +623,7 @@
     <option name="totallyTimeSpent" value="59543000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="871" y="3" width="1684" height="1077" extended-state="1" />
+    <frame x="871" y="3" width="1684" height="1077" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1031,7 +1023,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javapointers/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
-          <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+          <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
           <folding />
         </state>
       </provider>
