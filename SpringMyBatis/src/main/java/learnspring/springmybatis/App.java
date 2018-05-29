@@ -47,6 +47,9 @@ public class App {
                         + " " + p.getCreated()
                         + " " + p.getUser().getCreated()
                 );
+                for (PostTag pt : p.getPostTag()) {
+                    System.out.println(pt.getTag_id() );
+                }
             }
 
 //            BlogMapperI mapper = session.getMapper(BlogMapperI.class);

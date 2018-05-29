@@ -34,6 +34,10 @@
         LIMIT 2
     </select>
 
+    <select id="selectPostTag" resultType="learnspring.springmybatis.PostTag">
+        SELECT * FROM public.post_tag WHERE post_id = #{id}
+    </select>
+
     <resultMap id="postsResultMap" type="learnspring.springmybatis.Post" autoMapping="true">
         <!--<id property="id" column="id" />-->
         <result property="created" column="post_created" />
@@ -46,6 +50,13 @@
                      javaType="learnspring.springmybatis.Category" autoMapping="true">
             <!--<id property="id" column="category_id" />-->
         </association>
+        <collection property="postTag" javaType="ArrayList" column="id"
+                    ofType="learnspring.springmybatis.PostTag" select="selectPostTag">
+
+            <!--<association property="tag" column="tag_id"-->
+                         <!--javaType="learnspring.springmybatis.Tag" autoMapping="true">-->
+            <!--</association>-->
+        </collection>
     </resultMap>
 
 </mapper>
