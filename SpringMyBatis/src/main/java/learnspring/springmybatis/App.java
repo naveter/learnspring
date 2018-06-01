@@ -46,9 +46,11 @@ public class App {
                         + " " + p.getUser().getLastname()
                         + " " + p.getCreated()
                         + " " + p.getUser().getCreated()
+                        + " " + p.getUser().getRang().getRang_name()
+                        + " " + p.getUser().getRang().getName()
                 );
                 for (PostTag pt : p.getPostTag()) {
-                    System.out.println(pt.getTag_id() );
+                    System.out.println(pt.getTag_id() /*+ " " + pt.getTag().getTag_name()*/ );
                 }
             }
 
