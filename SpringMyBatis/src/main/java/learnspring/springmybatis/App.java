@@ -43,11 +43,12 @@ public class App {
             for (Post p : posts) {
                 System.out.println(p.getTitle() + " "
                         + p.getCategory().getName()
-                        + " " + p.getUser().getLastname()
+//                        + " " + p.getUser().getLastname()
                         + " " + p.getCreated()
-                        + " " + p.getUser().getCreated()
-                        + " " + p.getUser().getRang().getRang_name()
-                        + " " + p.getUser().getRang().getName()
+                        + " " + p.getUser().getId()
+//                        + " " + p.getUser().getCreated()
+//                        + " " + p.getUser().getRang().getRang_name()
+//                        + " " + p.getUser().getRang().getName()
                 );
                 for (PostTag pt : p.getPostTag()) {
                     System.out.println(pt.getTag_id() /*+ " " + pt.getTag().getTag_name()*/ );

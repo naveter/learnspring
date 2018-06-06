@@ -30,10 +30,10 @@
         , p.created as post_created, u.created as user_created
         , r.name as rang_name_alias
         from public.post p
-        join public.user u on u.id = p.user_id
+        left join public.user u on u.id = p.user_id
         join public.category c on c.id = p.category_id
-        join public.rang r on r.id = u.rang_id
-        LIMIT 2
+        left join public.rang r on r.id = u.rang_id
+        LIMIT 3
     </select>
 
     <select id="selectPostTag" resultType="learnspring.springmybatis.PostTag">
@@ -60,7 +60,7 @@
     <resultMap id="postsResultMap" type="learnspring.springmybatis.Post" autoMapping="true">
         <!--<id property="id" column="id" />-->
         <result property="created" column="post_created" />
-        <association property="user" column="user_id" resultMap="userResult"/>
+        <association property="user" column="user_id" resultMap="userResult" notNullColumn="user_id"/>
         <association property="category" column="category_id"
                      javaType="learnspring.springmybatis.Category" autoMapping="true">
             <!--<id property="id" column="category_id" />-->
