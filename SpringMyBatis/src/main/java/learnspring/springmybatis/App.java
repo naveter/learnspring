@@ -43,15 +43,15 @@ public class App {
             for (Post p : posts) {
                 System.out.println(p.getTitle() + " "
                         + p.getCategory().getName()
-//                        + " " + p.getUser().getLastname()
+                        + " " + p.getUser().getLastname()
                         + " " + p.getCreated()
                         + " " + p.getUser().getId()
-//                        + " " + p.getUser().getCreated()
-//                        + " " + p.getUser().getRang().getRang_name()
-//                        + " " + p.getUser().getRang().getName()
+                        + " " + p.getUser().getCreated()
+                        + " " + p.getUser().getRang().getRang_name()
+                        + " " + p.getUser().getRang().getName()
                 );
                 for (PostTag pt : p.getPostTag()) {
-                    System.out.println(pt.getTag_id() /*+ " " + pt.getTag().getTag_name()*/ );
+                    System.out.println(pt.getTag_id() /*+ " " + pt.getTag().getSlave_id()*/ );
                 }
             }
 
@@ -61,6 +61,16 @@ public class App {
 //
 //            User blog3 = session.selectOne("learnspring.springmybatis.BlogMapper.getUser2", 3);
 //            System.out.println(blog3.getFirstname() + " " + blog3.getLastname());
+
+            List<Master> masters = session.selectList("learnspring.springmybatis.BlogMapper.selectMasters");
+            for (Master m : masters) {
+                System.out.println(
+                    "master.id:" + m.getId()
+                    + " master.slave_id:" + m.getSlave_id()
+                    + " master.slave.id:" + (null != m.getSlave() ? m.getSlave().getId() : null)
+                    + " master.slave.name:" + (null != m.getSlave() ? m.getSlave().getName() : null)
+                );
+            }
 
         } finally {
             session.close();

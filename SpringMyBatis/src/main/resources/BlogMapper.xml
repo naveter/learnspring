@@ -72,9 +72,27 @@
             <!--<result property="tag_id" column="tag_id" />-->
             <association property="tag" column="tag_id" javaType="learnspring.springmybatis.Tag">
                 <result property="id" column="id" />
-                <result property="tag_name" column="tag_name" />
+                <result property="slave_id" column="slave_id" />
             </association>
         </collection>
+    </resultMap>
+
+    <select id="selectMasters" resultMap="masterResultMap">
+        select m.*, s.id as slaveid, s.name as name
+        from public.master m
+        left join public.slave s on s.id = m.slave_id
+        order by m.id ASC
+    </select>
+
+    <resultMap id="slaveResult" type="learnspring.springmybatis.Slave" autoMapping="true">
+        <result property="id" column="slaveid" />
+        <result property="name" column="name" />
+    </resultMap>
+
+    <resultMap id="masterResultMap" type="learnspring.springmybatis.Master">
+        <result property="id" column="id" />
+        <result property="slave_id" column="slave_id" />
+        <association property="slave" column="slave_id" resultMap="slaveResult" notNullColumn="slave_id"/>
     </resultMap>
 
 </mapper>
