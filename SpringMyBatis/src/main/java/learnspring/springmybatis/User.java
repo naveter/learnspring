@@ -10,6 +10,32 @@ public class User extends DBEntity {
     private String login;
     private String password;
     private Date lastlogin;
+    private Long rang_id;
+    private Rang rang;
+
+    public Long getRang_id() {
+        return rang_id;
+    }
+
+    public void setRang_id(Long rang_id) {
+        this.rang_id = rang_id;
+    }
+
+    public Rang getRang() {
+        return rang;
+    }
+
+    public void setRang(Rang rang) {
+        this.rang = rang;
+    }
+
+    public Long getRang_ID() {
+        return rang_id;
+    }
+
+    public void setRang_ID(Long rangID) {
+        this.rang_id = rangID;
+    }
 
     public String getFirstname() {
         return firstname;

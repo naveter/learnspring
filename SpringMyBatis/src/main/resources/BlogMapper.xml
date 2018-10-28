@@ -26,26 +26,73 @@
     </insert>
 
     <select id="selectPosts" resultMap="postsResultMap">
-        select p.*, u.*, c.*
+        select p.*, u.*, c.*, r.*
         , p.created as post_created, u.created as user_created
+        , r.name as rang_name_alias
         from public.post p
-        join public.user u on u.id = p.user_id
+        left join public.user u on u.id = p.user_id
         join public.category c on c.id = p.category_id
-        LIMIT 2
+        left join public.rang r on r.id = u.rang_id
+        LIMIT 3
     </select>
+
+    <select id="selectPostTag" resultType="learnspring.springmybatis.PostTag">
+        SELECT pt.*, t.*
+        FROM public.post_tag pt
+        JOIN public.tag t ON t.id = pt.tag_id
+        WHERE pt.post_id = #{id}
+    </select>
+
+    <resultMap id="userResult" type="learnspring.springmybatis.User" autoMapping="true">
+        <result property="created" column="user_created" />
+        <association property="rang" column="rang_id"
+                     javaType="learnspring.springmybatis.Rang" autoMapping="true">
+            <result property="name" column="rang_name_alias"></result>
+        </association>
+    </resultMap>
+
+    <!--<resultMap id="tagResult" type="learnspring.springmybatis.PostTag" autoMapping="true">-->
+        <!--<association property="tag" column="tag_id"-->
+        <!--javaType="learnspring.springmybatis.Tag" autoMapping="true">-->
+        <!--</association>-->
+    <!--</resultMap>-->
 
     <resultMap id="postsResultMap" type="learnspring.springmybatis.Post" autoMapping="true">
         <!--<id property="id" column="id" />-->
         <result property="created" column="post_created" />
-        <association property="user" column="user_id"
-                     javaType="learnspring.springmybatis.User" autoMapping="true">
-            <!--<id property="id" column="user_id" />-->
-            <result property="created" column="user_created" />
-        </association>
+        <association property="user" column="user_id" resultMap="userResult" notNullColumn="user_id"/>
         <association property="category" column="category_id"
                      javaType="learnspring.springmybatis.Category" autoMapping="true">
             <!--<id property="id" column="category_id" />-->
         </association>
+        <collection property="postTag" javaType="ArrayList" column="id"
+                    ofType="learnspring.springmybatis.PostTag" select="selectPostTag"  autoMapping="true">
+            <!--<result property="id" column="id" />-->
+            <!--<result property="post_id" column="post_id" />-->
+            <!--<result property="tag_id" column="tag_id" />-->
+            <association property="tag" column="tag_id" javaType="learnspring.springmybatis.Tag">
+                <result property="id" column="id" />
+                <result property="slave_id" column="slave_id" />
+            </association>
+        </collection>
+    </resultMap>
+
+    <select id="selectMasters" resultMap="masterResultMap">
+        select m.*, s.id as slaveid, s.name as name
+        from public.master m
+        left join public.slave s on s.id = m.slave_id
+        order by m.id ASC
+    </select>
+
+    <resultMap id="slaveResult" type="learnspring.springmybatis.Slave" autoMapping="true">
+        <result property="id" column="slaveid" />
+        <result property="name" column="name" />
+    </resultMap>
+
+    <resultMap id="masterResultMap" type="learnspring.springmybatis.Master">
+        <result property="id" column="id" />
+        <result property="slave_id" column="slave_id" />
+        <association property="slave" column="slave_id" resultMap="slaveResult" notNullColumn="slave_id"/>
     </resultMap>
 
 </mapper>

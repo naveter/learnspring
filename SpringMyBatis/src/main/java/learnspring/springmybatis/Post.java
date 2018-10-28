@@ -1,6 +1,7 @@
 package learnspring.springmybatis;
 
 import java.util.Date;
+import java.util.List;
 
 public class Post extends DBEntity {
 
@@ -13,6 +14,16 @@ public class Post extends DBEntity {
     private User user;
 
     private Category category;
+
+    private List<PostTag> postTag;
+
+    public List<PostTag> getPostTag() {
+        return postTag;
+    }
+
+    public void setPostTag(List<PostTag> postTag) {
+        this.postTag = postTag;
+    }
 
     public Long getUser_id() {
         return user_id;
